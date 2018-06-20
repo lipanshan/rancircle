@@ -1,15 +1,13 @@
 <!--index.wxml-->
+<view class="header">
+  <view class="search-wrap">
+    <text class="find">发现</text>
+    <text class="icon-search search"></text>
+  </view>
+  <view class="subtitle">
+    <text>精彩内容无时无刻</text>
+  </view>
+</view>
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      <text class="icon-wifi" style="font-size: 60px;color:red;"></text>
-      <text class="icon-recharge" style="font-size: 60px;color:red;"></text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  
 </view>
