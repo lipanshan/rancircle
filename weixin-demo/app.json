@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/scroll-view/scroll-view",
+    "pages/view/view",
+    "pages/swiper/swiper",
+    "pages/movable-view/movable-view",
+    "pages/cover-view/index/index",
+    "pages/icon/icon",
+    "pages/text/text",
+    "pages/rich-text/rich-text",
+    "pages/progress/progress",
+    "pages/button/button",
+    "pages/checkbox/checkbox",
+    "pages/from/from",
+    "pages/input/input"
+  ],
+  "window": {
+    "backgroundTextStyle": "black",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "WeChat-demo",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#ccc",
+    "enablePullDownRefresh": true
+  }
+}

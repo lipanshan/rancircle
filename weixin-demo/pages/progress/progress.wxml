@@ -1,0 +1,21 @@
+<!--pages/progress/progress.wxml-->
+<view class="section">
+  <progress 
+  percent="{{percent}}"
+  show-info="{{isShowInfo}}"
+  stroke-width="{{strokeWidth}}"
+  activeColor="{{currentColor}}"
+  backgroundColor="{{bgColor}}"
+  active="{{isActive}}"
+  active-mode="{{activeMode}}"
+  class="progress-wrap">
+  </progress>
+</view>
+<view class="button-group">
+<button bind:tap="showInfoChange">是否显示进度数值</button>
+<button bind:tap="randomColor">背景颜色和进度条颜色</button>
+<button bind:tap="activeChange">是否开启动画</button>
+<button bind:tap="activeModeChange">active-mode,backwards:从头开始，forwards：从上次结束点开始</button>
+<slider bind:change="percentChange" show-value min="0" max="100">percent</slider>
+<slider bind:change="strokeWidthChange" show-value min="0" max="100">stroke-width</slider>
+</view>

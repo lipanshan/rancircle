@@ -1,0 +1,8 @@
+/* pages/input/input.wxss */
+.section {
+  margin-top: 10px;
+  border: 1rpx solid blue;
+  padding: 5rpx;
+  background-color: #fff;
+  border-radius: 5rpx;
+}

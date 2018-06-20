@@ -1,0 +1,39 @@
+/**index.wxss**/
+.section_title {
+  font-size: 20rpx;
+  line-height: 40rpx;
+  text-align: center;
+  color: #333
+}
+.flex-wrap {
+  display: flex;
+  height: 200rpx;
+}
+.flex-item {
+  flex: 1;
+  font-size: 40rpx;
+  line-height: 250rpx;
+  text-align: center;
+}
+.bc_green {
+  background-color: green;
+}
+.bc_red {
+  background-color: red;
+}
+.bc_blue {
+  background-color: blue;
+}
+.bc_hover_green {
+  color: #fff;
+}
+.wrap_hover_green {
+  color: yellow;
+}
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+.flex-ite {
+  flex: 1;
+}

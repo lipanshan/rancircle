@@ -1,0 +1,50 @@
+<!--pages/scroll-view/scroll-view.wxml-->
+<view class="section">
+  <view class="scroll-view-title"><text>vertical-scroll</text></view>
+  <scroll-view 
+  scroll-y 
+  scroll-top="{{scrollTop}}" 
+  scroll-with-animation 
+  class="scroll-wrap" 
+  scroll-into-view="{{scrollToElem}}" 
+  upper-threshold="100" 
+  bind:scroll="scroll"
+  bind:scrolltoupper="upper" 
+  bind:scrolltolower="lower">
+    <view class="scroll-view-item bg_green"></view>
+    <view class="scroll-view-item bg_red"></view>
+    <view class="scroll-view-item bg_blue"></view>
+    <view id="item4" class="scroll-view-item bg_yellow"></view>
+    <view class="scroll-view-item bg_green"></view>
+    <view class="scroll-view-item bg_red"></view>
+    <view class="scroll-view-item bg_blue"></view>
+    <view class="scroll-view-item bg_yellow"></view>
+  </scroll-view>
+</view>
+<view class="section">
+  <view class="scroll-view-title"><text>horizonal-scroll</text></view>
+  <view><text>横向布局需要display:inline-block;white-space: nowrap;才可以其他都不行</text></view>
+  <scroll-view 
+  scroll-x="true" 
+  scroll-left="{{scrollLeft}}"
+   scroll-with-animation
+  class="flex-box" 
+  bind:scrolltoupper="upper" 
+  bind:scrolltolower="lower" 
+  bind:scroll="scroll"
+  scroll-into-view="{{scrollToElemh}}">
+    <view class="scroll-view-item_H bg_green"></view>
+    <view class="scroll-view-item_H bg_red"></view>
+    <view class="scroll-view-item_H bg_blue"></view>
+    <view id="item4h" class="scroll-view-item_H bg_yellow"></view>
+    <view class="scroll-view-item_H bg_green"></view>
+    <view class="scroll-view-item_H bg_red"></view>
+    <view class="scroll-view-item_H bg_blue"></view>
+    <view class="scroll-view-item_H bg_yellow"></view>
+  </scroll-view>
+</view>
+<view class="button-group">
+  <button bind:tap="tapScrollTop">点我-滚动到开始</button>
+  <button bind:tap="tapScrollBottom">点我-滚动到结尾</button>
+  <button bind:tap="tapScrollElem">点我-滚动到第四个元素</button>
+</view>

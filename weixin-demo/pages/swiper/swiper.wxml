@@ -1,0 +1,32 @@
+<!--pages/swiper/swiper.wxml-->
+<view class="section">
+<swiper 
+  autoplay="{{autoPlay}}"
+  intreval="{{interval}}"
+  duration="{{duration}}"
+  current="{{current}}"
+  circular="{{circular}}"
+  vertical="{{vertical}}"
+  previous-margin="{{previousMargin}}"
+  next-margin="{{nextMargin}}"
+  display-multiple-items="{{displayMultipleItems}}"
+  bind:change="swiperChange"
+  bind:animationfinish="animatiionFinish"
+  indicator-dots="{{indicatorDots}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{item + index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slider-image" width="355" height="150"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<button class="button" bind:tap="controlIndicatorDots">indicatorDots</button>
+<button class="button" bind:tap="changeAutoplay">changeAutoplay</button>
+<button class="button" bind:tap="changeCircular">changeCircular</button>
+<button class="button" bind:tap="changeVirtical">changeVirtical</button>
+<slider bind:change="intervalChange" show-value min="500" max="5000">interval</slider>
+<slider bind:change="durationChange" show-value min="1000" max="10000">duration</slider>
+<slider bind:change="currentChange" show-value min="0" max="5">当前显示第几章图片</slider>
+<slider bind:change="previousMarginChange" show-value min="0" max="100">previous-margin</slider>
+<slider bind:change="nextMarginChange" show-value min="0" max="100">next-margin</slider>
+<slider bind:change="displayMultipleItemsChange" show-value min="0" max="10">display-multiple-items</slider>
+</view>

@@ -1,0 +1,35 @@
+<!--pages/input/input.wxml-->
+<text>input</text>
+<view class="section">
+<input placeholder='这是一个可以自动聚焦的input' focus/>
+</view>
+<view class="section">
+<input value="这是一个有默认vlue的input"/>
+</view>
+<view class="section">
+<input type="text" placeholder='这个input的type=text'/>
+</view>
+<view class="section">
+<input type="number" placeholder='这个input的type=number，数字输入键盘'/>
+</view>
+<view class="section">
+<input type="idcard" placeholder='这个input的type=idcard，身份证输入键盘'/>
+</view>
+<view class="section">
+<input type="digit" placeholder='这个input的type=digit,带小说点的数字键盘'/>
+</view>
+<view class="section">
+<input type="text" confirm-type="send" placeholder='这个input的confirm-type=send, 右下角按钮为发送'/>
+</view>
+<view class="section">
+<input type="text" confirm-type="search" placeholder='这个input的confirm-type=search, 右下角按钮为搜索'/>
+</view>
+<view class="section">
+<input type="text" confirm-type="next" placeholder='这个input的confirm-type=next, 右下角按钮为下一个'/>
+</view>
+<view class="section">
+<input type="text" confirm-type="go" placeholder='这个input的confirm-type=go, 右下角按钮为前往'/>
+</view>
+<view class="section">
+<input type="text" confirm-type="done" placeholder='这个input的confirm-type=go, 右下角按钮为完成'/>
+</view>

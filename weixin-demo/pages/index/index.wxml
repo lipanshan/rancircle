@@ -1,0 +1,40 @@
+<!--index.html-->
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../view/view">view组件</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../scroll-view/scroll-view">scroll-view组件</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../swiper/swiper">swiper组件</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../movable-view/movable-view">movable-view</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../cover-view/index/index">cover-view</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../icon/icon">icon</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../text/text">text</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../rich-text/rich-text">rich-text</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../progress/progress">progress</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../button/button">button</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../checkbox/checkbox">checkbox</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../from/from">from</navigator>
+</view>
+<view class="section" hover-class="section-hover">
+  <navigator open-type="navigate" url="../input/input">input</navigator>
+</view>

@@ -1,0 +1,6 @@
+/* pages/button/button.wxss */
+.section {
+  min-height: 100rpx;
+  background-color: #fff;
+  margin-top: 10rpx;
+}

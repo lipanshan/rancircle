@@ -1,0 +1,43 @@
+<!--pages/movable-view/movable-view.wxml-->
+<view class="section">
+  <view class="title">movable-view区域小于movable-area区域</view>
+  <movable-area class="move-area">
+      <movable-view
+       direction="{{direction}}"
+        x="{{x}}"
+        y="{{y}}"
+        inertia="{{inertia}}"
+        out-of-bounds="{{outOfBounds}}"
+        bind:tap="tapXY"
+        damping="{{damping}}"
+        friction="{{friction}}"
+        disabled="{{isDisable}}"
+       class="move-view"></movable-view>
+  </movable-area>
+</view>
+<view class="section">
+  <view class="title">movable-view区域大于movable-area区域</view>
+  <movable-area class="move-area2">
+      <movable-view
+       direction="{{direction}}"
+        x="{{x}}"
+        y="{{y}}"
+        inertia="{{inertia}}"
+        out-of-bounds="{{outOfBounds}}"
+        bind:tap="tapXY"
+        damping="{{damping}}"
+        friction="{{friction}}"
+        disabled="{{isDisable}}"
+       class="move-view2"></movable-view>
+  </movable-area>
+</view>
+<view class="button-group">
+  <button bind:tap="directionChange">direction-{{direction}} 动态修改此项无效果</button>
+  <button bind:tap="inertiaChange">inertiaChange</button>
+  <button bind:tap="outOfBoundsChange">out-of-bounds</button>
+  <button bind:tap="disabledChange">disabled</button>
+  <slider bind:change="xChange" show-value min="0" max="500">x</slider>
+   <slider bind:change="yChange" show-value min="0" max="500">y</slider>
+   <slider bind:change="dampingChange" value="20" show-value min="0" max="500">damping阻尼系数-动态改变此项无效</slider>
+   <slider bind:change="frictionChange" value="2" show-value min="0" max="500">friction摩擦系数</slider>
+</view>

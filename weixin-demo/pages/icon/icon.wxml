@@ -1,0 +1,9 @@
+<!--pages/icon/icon.wxml-->
+<view class="section">
+  <text class="title">icon</text>
+  <view class="icon-list">
+    <block wx:for="{{iconList}}"> 
+    <icon type="{{item}}" color="{{iconColor[index]}}" wx:key="{{item}}" size="{{size}}" class="icon-item"></icon>
+    </block>
+  </view>
+</view>

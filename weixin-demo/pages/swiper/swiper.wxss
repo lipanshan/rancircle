@@ -1,0 +1,8 @@
+/* pages/swiper/swiper.wxss */
+.slider-image {
+  width: 100%;
+  height: 100%;
+}
+.button {
+  margin-top: 20rpx;
+}

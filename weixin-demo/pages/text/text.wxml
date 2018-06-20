@@ -1,0 +1,13 @@
+<!--pages/text/text.wxml-->
+<view class="section">
+  <text selectable="{{selectable}}">文字是否可选</text>
+  <button bind:tap="selectableChange">文字是否可选：{{selectable}}</button>
+</view>
+<view class="section">
+  <text space="{{space}}">文字是           否可选</text>
+  <button bind:tap="spaceChange">文字是否可选：{{space}}</button>
+</view>
+<view class="section">
+  <text decode="{{decode}}">格式转换decode可以解析的有 &nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text>
+  <button bind:tap="decodeChange">decode</button>
+</view>

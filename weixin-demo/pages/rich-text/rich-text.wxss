@@ -1,0 +1,9 @@
+/* pages/rich-text/rich-text.wxss */
+.section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 50%;
+  left: 0;
+  background: #fff;
+}

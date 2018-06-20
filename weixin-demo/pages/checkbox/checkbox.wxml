@@ -1,0 +1,12 @@
+<!--pages/checkbox/checkbox.wxml-->
+<text>checkbox-group</text>
+<checkbox-group bindchange="checkouChange">
+  <label class="checkbox" wx:for="{{items}}" wx:key="{{item.name}}">
+    <checkbox class="check-box" value="{{item.name}}" color="{{colors[index%3]}}" checked="{{item.checked}}">{{item.value}}</checkbox>
+    <view class="{{showCls[index]}} show-info"></view>
+  </label>
+</checkbox-group>
+<view>
+  <text>选中value列表：</text>
+  <text>{{checkedElem}}</text>
+</view>

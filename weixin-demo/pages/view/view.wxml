@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="section">
+  <view class="section_title">
+  flex-direction: row
+  </view>
+  <view class="flex-wrap" style="flex-direction: row" hover-class="wrap_hover_green">
+    <view class="flex-item bc_green" hover-stop-propagation="true" hover-class="bc_hover_green">
+      添加点击事件hover效果
+    </view>
+    <view class="flex-item bc_red" hover-stop-propagation="true">
+      hover-stop-propagatin 阻止点击事件冒泡
+    </view>
+    <view class="flex-item bc_blue">
+    点击后冒泡上上层
+    </view>
+  </view>
+</view> 
+<view class="section">
+  <view class="section_title">flex-direction: column</view>
+  <view class="flex-wrap" style="flex-direction: column">
+    <view class="flex-item bc_green" hover-class="bc_hover_green" hover-start-time="2000">点击后2秒才会触发点击事件</view>
+    <view class="flex-item bc_red" hover-class="bc_hover_green" hover-stay-time="2000">点击后点击效果保持2s</view>
+    <view class="flex-item bc_blue" hover-class="bc_hover_green" hover-start-time="1000" hover-stay-time="1000">点击1s后才会出现点击效果，该效果保持1s</view>
+  </view>
+</view>
