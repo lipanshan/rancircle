@@ -33,7 +33,7 @@
   </view>
   <view class="bottom-wrap">
     <view class="like-wrap"><icon class="like-icon icon-heart"></icon>1k+</view>
-    <view class="comment-wrap"><view class="comment-icon icon-comment-2"></view>179</view>
-    <view class="more-wrap"><view class="more-icon icon-detail"></view></view>
+    <view class="comment-wrap"><icon class="comment-icon icon-comment-2"></icon>179</view>
+    <view class="more-wrap"><icon class="more-icon">┅</icon></view>
   </view>
 </view>

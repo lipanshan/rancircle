@@ -1,2 +1,3 @@
 <!--pages/friends/friends.wxml-->
 <text>dsfsf</text>
+<view class="icon-heart"></view>

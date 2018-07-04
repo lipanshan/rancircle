@@ -1,6 +1,7 @@
 /* pages/infoitem/infoitem.wxss */
+@import "../../common/font/font"; 
 .info-item {
-  padding: 54rpx 26rpx 30rpx;
+  padding: 54rpx 26rpx 0;
   background-color: #343339;
 }
 .avatar-wrapper {
@@ -122,15 +123,10 @@
 }
 .bottom-wrap {
   margin-top: 50rpx;
-  margin-bottom: 40rpx;
+  padding-bottom: 40rpx;
   display: -webkit-flex;
   display: flex;
-}
-.more-wrap,
-.comment-wrap,
-.like-wrap {
-  font-size: 32rpx;
-  line-height: 52rpx;
+  border-bottom: 1px solid rgba(0, 0, 0, .4);
 }
 .comment-wrap,
 .like-wrap {
@@ -145,6 +141,12 @@
   flex: 1;
   text-align: right;
 }
+.comment-wrap,
+.like-wrap,
+.more-icon,
+.comment-icon,
 .like-icon {
   font-size: 32rpx;
+  line-height: 52rpx;
+  color: #928e8d;
 }

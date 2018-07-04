@@ -1,9 +1,5 @@
 /**index.wxss**/
 .header {
-  /* position: fixed;
-  top: 0;
-  right: 0;
-  left: 0; */
   padding-left: 36rpx;
   padding-right: 36rpx;
   height: 126rpx;
@@ -159,7 +155,6 @@ swiper {
   padding-bottom: 38rpx;
   font-size: 0;
   background-color: #343339;
-  border-bottom: 2rpx solid #000;
 }
 .topic-list::after {
   content: "";
