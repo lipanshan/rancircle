@@ -21,25 +21,25 @@
         "selectedIconPath": "image/finda.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/active/active",
         "text": "活动",
         "iconPath": "image/active.png",
         "selectedIconPath": "image/select_active.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/run/run",
         "text": "run",
         "iconPath": "image/run.png",
         "selectedIconPath": "image/select_run.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/friends/friends",
         "text": "好友",
         "iconPath": "image/friend.png",
         "selectedIconPath": "image/select_friend.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/user/user",
         "text": "我",
         "iconPath": "image/user.png",
         "selectedIconPath": "image/select_user.png"
