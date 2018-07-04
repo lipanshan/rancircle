@@ -7,44 +7,7 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    imgUrls: [
-      '../../image/slider1.jpg',
-      '../../image/slider2.jpg',
-      '../../image/slider3.jpg',
-      '../../image/slider4.jpg',
-      '../../image/slider5.jpg'
-    ],
-    scrollViews: [
-      {
-        'text': '推荐',
-        'icon': 'icon-medal',
-        'color': '#f63d5d'
-      },
-      {
-        'text': '赛事资讯',
-        'icon': 'icon-plain',
-        'color': '#ff8903'
-      },
-      {
-        'text': '跑步装备',
-        'icon': 'icon-run',
-        'color': '#70debb'
-      },
-      {
-        'text': '提高训练',
-        'icon': 'icon-o2-run',
-        'color': '#7ed320'
-      }
-    ],
-    topicList: [
-      '夏季装备晒一晒',
-      '讲讲你的瘦身计划',
-      '尬聊世界杯',
-      '我的第一双跑鞋',
-      '我的第一次活动'
-    ]
-
+    canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
   bindViewTap: function() {
@@ -87,11 +50,5 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
-  },
-  swiperChange (e) {
-    console.log(e)
-  },
-  scrollView (e) {
-    console.log(e)
   }
 })

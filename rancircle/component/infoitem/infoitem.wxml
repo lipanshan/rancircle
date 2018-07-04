@@ -1,0 +1,39 @@
+<!--pages/infoitem/infoitem.wxml-->
+<view class="info-item">
+  <view class="avatar-wrapper">
+    <view class="avatar-wrap">
+      <view class="avatar-img">
+        <image class="avatar-image" src="../../image/avatar.jpg"></image>
+      </view>
+      <view class="avatar-txt">
+        <text class="name">辣椒HY</text>
+        <view class="time">06:56</view>
+      </view>
+    </view>
+    <view class="address">
+      <text>广东-汕头</text>
+    </view>
+  </view>
+  <view class="say-wrap">
+    今天，我是流氓辣椒
+  </view>
+  <view class="subsay-wrap">
+    <text class="sub-txt {{flag}}">跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊
+        跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊</text>
+    <button class="toggle-btn" bindtap="toggleMore">展开</button>
+  </view>
+  <view class="image-list">
+    <block wx:for="{{urls}}" wx:key="{{item}}">
+        <view class="image-item {{urls.length < 3 ? 'layout-flex' : 'layout-percent'}}">
+          <view class="image-box" bindtap="seeBagImage">
+            <image class="show-img" src="../../image/{{item}}"></image>
+          </view>
+        </view>
+      </block>
+  </view>
+  <view class="bottom-wrap">
+    <view class="like-wrap"><icon class="like-icon icon-heart"></icon>1k+</view>
+    <view class="comment-wrap"><view class="comment-icon icon-comment-2"></view>179</view>
+    <view class="more-wrap"><view class="more-icon icon-detail"></view></view>
+  </view>
+</view>

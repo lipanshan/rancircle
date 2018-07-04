@@ -9,5 +9,48 @@
   </view>
 </view>
 <view class="container">
-  
+  <view class="swiper-wrap">
+    <swiper indicator-dots 
+      indicator-color="#fff"
+      indicator-active-color="#ff3a74"
+      autoplay
+      circular
+      current="0"
+      interval="4000"
+      previous-margin="15px"
+      next-margin="15px"
+      display-multiple-items="1"
+      bindchange="swiperChange"
+    >
+    <block wx:for="{{imgUrls}}" wx:key="item">
+      <swiper-item class="swiper-item">
+        <view class="image-wrap">
+          <image class="image" src="{{item}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+    </swiper>
+  </view>
+  <view class="scroll-wrap">
+    <view class="scroll-content">
+    <scroll-view scroll-x
+      scroll-left="50"
+      scroll-width-animation
+      bindscroll="scrollView"
+      class="scroll-view-content"
+    >
+      <view wx:for="{{scrollViews}}" wx:key="item.text" class="view-scroll-item">{{item.text}}<view class="{{item.icon}} icon"></view></view>
+    </scroll-view>
+    </view>
+  </view>
+  <view class="title-wrap">
+    <view class="title"><text>精选话题</text></view>
+    <view class="more-wrap"><text class="more-txt">更多</text><text class="icon-more more-world"></text></view>
+  </view>
+  <view class="topic-list">
+    <text wx:for="{{topicList}}" wx:key="{{item}}" class="topic-item">{{item}}</text>
+  </view>
+  <view class="info-list">
+   <info-item></info-item>
+  </view>
 </view>

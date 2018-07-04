@@ -11,9 +11,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.1.0",
+	"libVersion": "2.1.1",
 	"appid": "wxbeb9314dc24d7244",
-	"projectname": "demo",
+	"projectname": "wxbeb9314dc24d7244",
 	"isGameTourist": false,
 	"condition": {
 		"search": {

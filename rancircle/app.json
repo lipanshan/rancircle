@@ -16,8 +16,37 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "发现"
+        "text": "发现",
+        "iconPath": "image/find.png",
+        "selectedIconPath": "image/finda.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动",
+        "iconPath": "image/active.png",
+        "selectedIconPath": "image/select_active.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "run",
+        "iconPath": "image/run.png",
+        "selectedIconPath": "image/select_run.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "好友",
+        "iconPath": "image/friend.png",
+        "selectedIconPath": "image/select_friend.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/select_user.png"
       }
-    ]
+    ],
+    "backgroundColor": "#343339",
+    "color": "#fff",
+    "selectedColor": "#ff3b73"
   }
 }
