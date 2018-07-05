@@ -4,7 +4,8 @@
     "pages/active/active",
     "pages/run/run",
     "pages/friends/friends",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/menu/menu"
   ],
   "window": {
     "backgroundTextStyle": "light",

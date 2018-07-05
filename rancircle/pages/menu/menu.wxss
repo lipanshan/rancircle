@@ -1,0 +1,39 @@
+/* pages/menu/menu.wxss */
+.menu {
+  padding-left: 16rpx;
+  padding-right: 16rpx;
+  height: 80rpx;
+  background-color: #25262b;
+  overflow: hidden;
+}
+.nav {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+}
+.tag-item {
+  margin-left: 16rpx;
+  display: inline-block;
+  padding: 0;
+  width: 134rpx;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 28rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #25262b;
+}
+.tag-item::after {
+  border-color: #25262b;
+}
+.active-tag-item {
+  color: rgba(255, 255, 255, 1);
+}
+.active-line {
+  position: absolute;
+  top:76rpx;
+  left: 0;
+  width: 134rpx;
+  height: 4rpx;
+  background-color: #cb4c5d;
+  transition: all 0.2s linear;
+}

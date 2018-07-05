@@ -1,0 +1,16 @@
+<!--pages/menu/menu.wxml-->
+<view class="menu">
+  <scroll-view scroll-x scroll-with-animation scroll-left="{{scrollLeft}}"  class="nav">
+    <block wx:for="{{menus}}" wx:key="{{item}}">
+      <button bindtap="tagTap" class="tag-item {{currentMenuItem === index ? 'active-tag-item': ''}}" hover-class="active-tag-item">{{item}}</button>
+    </block>
+    <view class="active-line" style="transform: translate3d({{moveLine}}px, 0, 0);"></view>
+  </scroll-view>
+</view>
+<view class="content">
+  <scroll-view scroll-y scroll-with-animation class="list">
+    <view class="list-item">
+
+    </view>
+  </scroll-view>
+</view>

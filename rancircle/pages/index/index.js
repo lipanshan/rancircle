@@ -43,6 +43,144 @@ Page({
       '尬聊世界杯',
       '我的第一双跑鞋',
       '我的第一次活动'
+    ],
+    dynamics: [
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道8',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道7',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道6',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道5',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show6.jpg',
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道4',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show4.jpg',
+          'show5.jpg',
+          'show6.jpg',
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道3',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show3.jpg',
+          'show4.jpg',
+          'show5.jpg',
+          'show6.jpg',
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道2',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show2.jpg',
+          'show3.jpg',
+          'show4.jpg',
+          'show5.jpg',
+          'show6.jpg',
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      },
+      {
+        avatar: '../../image/avatar.jpg',
+        userName: '樱木花道1',
+        time: '06:56',
+        address: '广东-汕头',
+        title: '今天，我是浏览等级分类',
+        subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
+        images: [
+          'show1.jpg',
+          'show2.jpg',
+          'show3.jpg',
+          'show4.jpg',
+          'show5.jpg',
+          'show6.jpg',
+          'show7.jpg',
+          'show8.jpg',
+          'show9.jpg'
+        ],
+        favorite: '1000',
+        talk: '179'
+      }
     ]
 
   },

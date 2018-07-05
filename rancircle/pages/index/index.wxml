@@ -13,7 +13,6 @@
     <swiper indicator-dots 
       indicator-color="#fff"
       indicator-active-color="#ff3a74"
-      autoplay
       circular
       current="0"
       interval="4000"
@@ -39,7 +38,7 @@
       bindscroll="scrollView"
       class="scroll-view-content"
     >
-      <view wx:for="{{scrollViews}}" wx:key="item.text" class="view-scroll-item">{{item.text}}<view class="{{item.icon}} icon"></view></view>
+      <navigator open-type="navigateTo" url="../menu/menu?id={{index}}" wx:for="{{scrollViews}}" wx:key="item.text" class="view-scroll-item">{{item.text}}<view class="{{item.icon}} icon"></view></navigator>
     </scroll-view>
     </view>
   </view>
@@ -51,6 +50,8 @@
     <text wx:for="{{topicList}}" wx:key="{{item}}" class="topic-item">{{item}}</text>
   </view>
   <view class="info-list">
-   <info-item></info-item>
+    <block wx:for="{{dynamics}}" wx:key="{{item.userName}}">
+      <info-item info="{{item}}"></info-item>
+    </block>
   </view>
 </view>
