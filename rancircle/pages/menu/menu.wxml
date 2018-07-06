@@ -1,16 +1,33 @@
 <!--pages/menu/menu.wxml-->
 <view class="menu">
-  <scroll-view scroll-x scroll-with-animation scroll-left="{{scrollLeft}}"  class="nav">
+  <scroll-view scroll-x scroll-with-animation scroll-left="{{scrollLeft}}" class="nav">
     <block wx:for="{{menus}}" wx:key="{{item}}">
-      <button bindtap="tagTap" class="tag-item {{currentMenuItem === index ? 'active-tag-item': ''}}" hover-class="active-tag-item">{{item}}</button>
+      <button bindtap="tagTap" data-index="{{index}}" class="tag-item {{currentMenuItem === index ? 'active-tag-item': ''}}">{{item}}</button>
     </block>
     <view class="active-line" style="transform: translate3d({{moveLine}}px, 0, 0);"></view>
   </scroll-view>
 </view>
 <view class="content">
-  <scroll-view scroll-y scroll-with-animation class="list">
-    <view class="list-item">
-
-    </view>
-  </scroll-view>
+  <swiper bindchange="cntChange" current="{{currentMenuItem}}" class="menu-content">
+    <block wx:for="{{content}}" wx:key="{{index}}">
+      <swiper-item>
+        <scroll-view id="contentItem{{index}}" scroll-y scroll-with-animation class="list">
+          <block wx:for="{{item}}" wx:key="{{index}}">
+            <view class="list-item">
+              <view class="avatar-wrap">
+                <view class="avatar-box">
+                  <image class="list-item-img" src="{{item.avatar}}"></image>
+                </view>
+              </view>
+              <view class="cnt">
+                <view class="title ellipsis">{{item.title}}</view>
+                <view class="subtitle">{{item.subtitle}}</view>
+                <button class="list-item-btn">{{item.btn}}</button>
+              </view>
+            </view>
+          </block>
+        </scroll-view>
+      </swiper-item>
+    </block>
+  </swiper>
 </view>

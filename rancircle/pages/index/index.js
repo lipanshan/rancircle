@@ -9,11 +9,11 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     imgUrls: [
-      '../../image/slider1.jpg',
-      '../../image/slider2.jpg',
       '../../image/slider3.jpg',
-      '../../image/slider4.jpg',
-      '../../image/slider5.jpg'
+      '../../image/slider3.jpg',
+      '../../image/slider3.jpg',
+      '../../image/slider3.jpg',
+      '../../image/slider3.jpg'
     ],
     scrollViews: [
       {
@@ -53,7 +53,7 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show9.jpg'
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -66,8 +66,8 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -80,9 +80,9 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -95,10 +95,10 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show6.jpg',
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -111,12 +111,12 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show4.jpg',
           'show5.jpg',
-          'show6.jpg',
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -129,13 +129,13 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show3.jpg',
-          'show4.jpg',
           'show5.jpg',
-          'show6.jpg',
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -148,14 +148,14 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show2.jpg',
-          'show3.jpg',
-          'show4.jpg',
           'show5.jpg',
-          'show6.jpg',
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -168,15 +168,15 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show1.jpg',
-          'show2.jpg',
-          'show3.jpg',
-          'show4.jpg',
           'show5.jpg',
-          'show6.jpg',
-          'show7.jpg',
-          'show8.jpg',
-          'show9.jpg'
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg',
+          'show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
