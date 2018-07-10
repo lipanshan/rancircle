@@ -1,0 +1,20 @@
+<!--pages/comment/comment.wxml-->
+<view class="comment-title-wrap">
+  <text class="comment-title">热门评论</text>
+  <view class="line"></view>
+</view>
+<block >
+  <view class="nothing">暂无跟帖数据</view>
+</block>
+<view class="comment-title-wrap">
+  <text class="comment-title">最新评论</text>
+  <view class="line"></view>
+</view>
+<view wx:if="{{info.newComment}}" class="comment-list">
+  <block wx:for="{{info.newComment}}" wx:key="{{index}}">
+
+  </block>
+</view>
+<block wx:else>
+  <view class="nothing">暂无跟帖数据</view>
+</block>

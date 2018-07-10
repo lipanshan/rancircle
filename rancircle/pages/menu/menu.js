@@ -15,11 +15,9 @@ Page({
       '跑步文化'
     ],
     moveLine: 0,
-    scrollLeft: 0,
     currentMenuItem: 0,
     content: [
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '推荐推荐推荐推荐推荐1',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -68,8 +66,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '赛事资讯赛事资讯赛事资讯',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -118,8 +115,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '跑步装备跑步装备跑步装备',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -168,8 +164,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '提高训练提高训练',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -218,8 +213,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '跑团地带跑团地带',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -268,8 +262,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '跑步故事跑步故事',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -318,8 +311,7 @@ Page({
           button: '提高训练'
         }
       ],
-      [
-        {
+      [{
           avatar: '../../image/avatar.jpg',
           title: '跑步文化跑步文化跑步文化',
           subtitle: '不容忽视的骨骼综合征以及治疗方法。不容忽视的骨骼综合征以及治疗方法。',
@@ -369,21 +361,27 @@ Page({
         }
       ]
     ],
+    scrollLeft: 0,
     menuItemWidt: 0,
     itemToItemLen: 0,
-    contentMove: 0,
-    cntScrollItem: 'contentItem0'
-  },
+    currentMenuLeft: 0,
+    currentMenuRight: 0,
+    moveStyle: '',
+    touchInit: {
+      pageX: 0,
+      isTouch: true
+    }
+  }, 
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     const that = this
     if (options.id) {
       let itemLen = 0
       const $ = wx.createSelectorQuery()
-      $.selectAll('.tag-item').boundingClientRect(function (rect) {
+      $.selectAll('.tag-item').boundingClientRect(function(rect) {
         if (rect.length >= 1) {
           const len = (rect[1].left - rect[0].left) * options.id + (rect[1].left - rect[0].right)
           that.setData({
@@ -391,7 +389,7 @@ Page({
             currentMenuItem: +options.id,
             menuItemWidt: rect[1].left - rect[0].left,
             itemToItemLen: rect[1].left - rect[0].right,
-            cntScrollItem: `contentItem${options.id}`
+            currentMenuLeft: +options.id
           })
         }
       }).exec();
@@ -401,77 +399,149 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
-  
+  onReady: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-  
+  onShow: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
-  
+  onHide: function() {
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
-  
+  onUnload: function() {
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-  
+  onPullDownRefresh: function() {
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
-  
+  onReachBottom: function() {
+
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-  
+  onShareAppMessage: function() {
+
   },
-  tagTap (e) {
-    const len = this.data.menuItemWidt * e.currentTarget.dataset.index + this.data.itemToItemLen
-    const lenMin = this.data.menuItemWidt
-    const clientWidth = wx.getSystemInfoSync().screenWidth
-    const lenMax = wx.getSystemInfoSync().windowWidth - lenMin
+  tagTap(e) {
+    const index = e.currentTarget.dataset.index
+    const len = this._menuActiveItem(index)
     const obj = {
       moveLine: len,
-      currentMenuItem: e.currentTarget.dataset.index
+      currentMenuItem: index
     }
-    if (e.touches[0].pageX <= lenMin) {
-      Object.assign(obj,{
-        scrollLeft: len - lenMin * 2
-      })
-    } else if (e.touches[0].pageX >= lenMax) {
-      Object.assign(obj, {
-        scrollLeft: len + lenMin * 2
+    this._cntMoveLeft(index)
+    this.setData(obj)
+
+  },
+  _menuActiveItem(index) {
+    return this.data.menuItemWidt * index + this.data.itemToItemLen
+  },
+  _cntMoveLen(index) {
+    return this.data.menuItemWidt * index
+  },
+  _cntMoveLeft(index) {
+    if (index === this.data.currentMenuItem) return false
+    if (this.data.moveStyle) {
+      this.setData({
+        moveStyle: ''
       })
     }
+    const len = this.data.menuItemWidt * index + this.data.itemToItemLen
+    setTimeout(() => {
+      this.setData({
+        currentMenuLeft: this.data.currentMenuItem,
+        currentMenuRight: index,
+        moveStyle: 'menu-content-left',
+        moveLine: len,
+        currentMenuItem: index,
+        scrollLeft: this._cntMoveLen(index)
+      })
+    }, 100)
+  },
+  _cntMoveRight(index) {
+    if (index === this.data.currentMenuItem) return false
+    if (this.data.moveStyle) {
+      this.setData({
+        moveStyle: 'menu-content-init'
+      })
+    }
+    const that = this
+    const len = this.data.menuItemWidt * index + this.data.itemToItemLen
+    setTimeout(() => {
+      this.setData({
+        currentMenuLeft: index,
+        currentMenuRight: this.data.currentMenuItem,
+        moveStyle: 'menu-content-right',
+        moveLine: len,
+        currentMenuItem: index,
+        scrollLeft: this._cntMoveLen(index)
+      })
+    }, 100)
+  },
+  cntTouchStart(e) {
+    if (!this.data.touchInit.isTouch) return false
+    const obj = Object.assign(this.data.touchInit, {
+      pageX: e.touches[0].pageX
+    })
     this.setData(obj)
   },
-  cntChange (e) {
-    console.log(e)
-    const len = this.data.menuItemWidt * e.detail.current + this.data.itemToItemLen
-    this.setData({
-      currentMenuItem: e.detail.current,
-      moveLine: len
+  cntTouchMove(e) {
+    if (!this.data.touchInit.isTouch) {
+      return false
+    }
+    const currentTouch = {
+      pageX: e.touches[0].pageX
+    }
+    if (currentTouch.pageX > this.data.touchInit.pageX && currentTouch.pageX - this.data.touchInit.pageX >= 10) {
+      let index = this.data.currentMenuItem - 1
+      if (index <= 0) {
+        index = 0
+      }
+      const obj = Object.assign(this.data.touchInit, {
+        isTouch: false
+      })
+      this.setData(obj)
+      this._cntMoveRight(index)
+    }
+    if (currentTouch.pageX < this.data.touchInit.pageX && currentTouch.pageX - this.data.touchInit.pageX <= -10) {
+      let index = this.data.currentMenuItem + 1
+      if (index >= this.data.menus.length) {
+        index = this.data.menus.length - 1
+      }
+      const obj = Object.assign(this.data.touchInit, {
+        isTouch: false
+      })
+      this.setData(obj)
+      this._cntMoveLeft(index)
+    }
+  },
+  cntTouchEnd(e) {
+    const obj = Object.assign(this.data.touchInit, {
+      isTouch: true,
+      pageX: 0,
     })
+    this.setData(obj)
   }
 })

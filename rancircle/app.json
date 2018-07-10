@@ -5,7 +5,9 @@
     "pages/run/run",
     "pages/friends/friends",
     "pages/user/user",
-    "pages/menu/menu"
+    "pages/menu/menu",
+    "pages/menudetail/menudetail",
+    "pages/comment/comment"
   ],
   "window": {
     "backgroundTextStyle": "light",

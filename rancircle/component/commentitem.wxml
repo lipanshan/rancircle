@@ -1,0 +1,17 @@
+<!--component/commentitem.wxml-->
+<view class="comment-item">
+  <view class="avatar-wrap">
+    <image class="avatar" src="{{info.avatar}}"></image>
+  </view>
+  <view class="cnt-wrap">
+    <view class="name-wrap">
+      <text class="name">{{info.name}}</text>
+      <text class="time">{{info.time}}</text>
+    </view>
+    <view class="text">{{info.commentTxt}}</view>
+  </view>
+  <view class="agree-wrap">
+    <text class="agree-num">{{info.agreeNum}}</text>
+    <text bindtap="addAgree" data-info="{{info}}" class=" icon icon-agree"></text>
+  </view>
+</view>

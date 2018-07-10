@@ -7,27 +7,39 @@
     <view class="active-line" style="transform: translate3d({{moveLine}}px, 0, 0);"></view>
   </scroll-view>
 </view>
-<view class="content">
-  <swiper bindchange="cntChange" current="{{currentMenuItem}}" class="menu-content">
-    <block wx:for="{{content}}" wx:key="{{index}}">
-      <swiper-item>
-        <scroll-view id="contentItem{{index}}" scroll-y scroll-with-animation class="list">
-          <block wx:for="{{item}}" wx:key="{{index}}">
-            <view class="list-item">
-              <view class="avatar-wrap">
-                <view class="avatar-box">
-                  <image class="list-item-img" src="{{item.avatar}}"></image>
-                </view>
-              </view>
-              <view class="cnt">
-                <view class="title ellipsis">{{item.title}}</view>
-                <view class="subtitle">{{item.subtitle}}</view>
-                <button class="list-item-btn">{{item.btn}}</button>
-              </view>
+<view class="content" bindtouchstart="cntTouchStart" bindtouchmove="cntTouchMove" bindtouchend="cntTouchEnd">
+  <view class="menu-content {{moveStyle}}">
+    <scroll-view id="contentItemLeft" scroll-y scroll-with-animation class="list">
+      <block wx:for="{{content[currentMenuLeft]}}" wx:key="{{index}}">
+        <navigator open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
+          <view class="avatar-wrap">
+            <view class="avatar-box">
+              <image class="list-item-img" src="{{item.avatar}}"></image>
             </view>
-          </block>
-        </scroll-view>
-      </swiper-item>
-    </block>
-  </swiper>
+          </view>
+          <view class="cnt">
+            <view class="title ellipsis">{{item.title}}</view>
+            <view class="subtitle">{{item.subtitle}}</view>
+            <button class="list-item-btn">{{item.button}}</button>
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+    <scroll-view id="contentItemRight" scroll-y scroll-with-animation class="list">
+      <block  wx:for="{{content[currentMenuRight]}}" wx:key="{{index}}">
+        <navigator open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
+          <view class="avatar-wrap">
+            <view class="avatar-box">
+              <image class="list-item-img" src="{{item.avatar}}"></image>
+            </view>
+          </view>
+          <view class="cnt">
+            <view class="title ellipsis">{{item.title}}</view>
+            <view class="subtitle">{{item.subtitle}}</view>
+            <button class="list-item-btn">{{item.button}}</button>
+          </view>
+        </navigator>
+      </block>
+    </scroll-view>
+  </view>
 </view>

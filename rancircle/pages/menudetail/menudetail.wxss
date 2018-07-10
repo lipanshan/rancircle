@@ -1,0 +1,139 @@
+/* pages/menudetail/menudetail.wxss */
+.h1 {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 30rpx;
+  font-size: 40rpx;
+  line-height: 48rpx;
+  color: #020202;
+}
+.subtitle {
+  margin: 0 30rpx;
+  font-size: 0;
+  white-space: nowrap;
+}
+.tag-name,
+.txt,
+.time {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.tag-name {
+  margin-right: 24rpx;
+  color: #8899b7;
+}
+.txt,
+.time {
+  color: #b7b7b7;
+}
+.text-cnt {
+  margin: 0 30rpx;
+  padding-bottom: 100rpx;
+  font-size: 30rpx;
+  line-height: 54rpx;
+  color: #323232;
+}
+.text {
+  display: block;
+  margin-top: 38rpx;
+  margin-bottom: 68rpx;
+}
+.image-wrap {
+  position: relative;
+  padding-bottom: 66.666%;
+  overflow: hidden;
+  height: 0;
+  background-color: #d8d7dc;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.article-bottom {
+  margin-top: 105rpx;
+  padding-bottom: 37rpx;
+  display: -webkit-flex;
+  display: flex;
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.article-bottom-left {
+  flex: 1;
+  font-size: 0;
+  white-space: nowrap;
+}
+.article-bottom-left,
+.comment-num {
+  font-size: 24rpx;
+  line-height: 44rpx;
+  color: #b6b6b6;
+}
+.comment-num {
+  display: block;
+  flex: 1;
+  text-align: right;
+}
+.article-collection {
+  margin-left: 24rpx;
+}
+.button-wrap {
+  margin-top: 24rpx;
+  background-color: #f4f4f4;
+}
+.see-all {
+  display: block;
+  font-size: 28rpx;
+  line-height: 88rpx;
+  color: #9c9c9c;
+  background: none;
+}
+.see-all::after {
+  border-color: transparent;
+}
+.commit-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #1c1d21;
+  transition: all 0.3s linear;
+}
+.commit-btn-hide {
+  bottom: -100rpx;
+}
+.commit-txt {
+  flex: 0 0 176rpx;
+  padding-right: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: hidden;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: right;
+}
+.commit-input-wrap {
+  flex: 1;
+  -webkit-flex: 1;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-right: 20rpx;
+  background-color: #1c1d21;
+}
+.commit-input {
+  display: block;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  height: 34rpx;
+  background-color: transparent;
+}
+.commit-blur {
+  background-color: #fff;
+}

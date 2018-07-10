@@ -1,0 +1,30 @@
+/* pages/comment/comment.wxss */
+@import "../../common/font/font.wxss";
+.comment-title-wrap {
+  margin: 31rpx 33rpx 0;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+}
+.comment-title {
+  flex: 0 0 119rpx;
+  width: 119rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #7e7e7e;
+}
+.line {
+  flex: 1;
+  height: 1rpx;
+  background-color: #7e7e7e;
+}
+.nothing {
+  margin: 31rpx 33rpx 0;
+  padding-left: 68rpx;
+  font-size: 28rpx;
+  line-height: 96rpx;
+  color: #868686;
+}
+.comment-list {
+  margin: 0 33rpx;
+}

@@ -1,0 +1,61 @@
+/* component/commentitem.wxss */
+@import "../common/font/font.wxss";
+.comment-item {
+  display: flex;
+  display: -webkit-flex;
+  border-bottom: 1rpx solid #cbcbcb;
+}
+.avatar-wrap {
+  margin-top: 20rpx;
+  flex: 0 0 72rpx;
+  width: 72rpx;
+  height: 72rpx;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.avatar {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cnt-wrap {
+  margin-top: 20rpx;
+  flex: 1;
+  padding-left: 20rpx;
+}
+.name-wrap {
+  font-size: 0;
+  white-space: nowrap;
+}
+.name,
+.text {
+  font-size: 28rpx;
+  line-height: 48rpx;
+}
+.name {
+  color: #111111;
+}
+.time {
+  font-size: 20rpx;
+  line-height: 48rpx;
+  color: #949494;
+}
+.text {
+  padding-bottom: 15rpx;
+  color: #7e7e7e;
+}
+.agree-wrap {
+  margin-top: 20rpx;
+}
+.agree-num {
+  padding-right: 10rpx;
+  font-size: 18rpx;
+  line-height: 28rpx;
+  color: #8f8f8f;
+}
+.icon-agree {
+  font-size: 38rpx;
+  line-height: 38rpx;
+  color: #92b3e8;
+}
