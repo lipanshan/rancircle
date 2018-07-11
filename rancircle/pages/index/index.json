@@ -1,5 +1,6 @@
 {
   "usingComponents": {
     "info-item": "../../component/infoitem/infoitem"
-  }
+  },
+  "navigationBarTitleText": "发现"
 }

@@ -18,16 +18,13 @@
         <text class="read-num">阅读{{info.readNum}}</text>
         <text class="article-collection">收藏{{info.collectionNum}}</text>
       </view>
-      <text class="comment-num">评论{{info.commentNum}}</text>
+      <text class="comment-num">评论{{info.comments.hotComment.length + info.comments.newComment.length}}</text>
     </view>
     <navigator url="../comment/comment?id={{articalId}}&tag={{info.tagName}}" class="button-wrap">
       <button class="see-all">查看所有跟帖</button>
     </navigator>
   </view>
 </view>
-<view class="commit-btn {{isShow}}">
-  <label class="commit-txt">{{touchTxt}}写评论</label>
-  <view class="commit-input-wrap">
-    <input bindblur="commentBlur" cursor-spacing="50" adjust-position confirm-type="send" bindfocus="commentFocus" bindconfirm="commitConfirm" bindinput="commitInput" value="{{commitTxt}}" class="commit-input {{commitFlag}}" type="text"></input>
-  </view>
-</view>
+<navigator url="../comment/comment?id={{articalId}}&tag={{info.tagName}}" class="commit-btn {{isShow}}">
+  <label bindtap="inputComment" class="commit-txt">{{touchTxt}}写评论</label>
+</navigator>

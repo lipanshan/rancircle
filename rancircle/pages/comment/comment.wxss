@@ -28,3 +28,46 @@
 .comment-list {
   margin: 0 33rpx;
 }
+.commit-btn {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #1c1d21;
+  transition: all 0.3s linear;
+}
+.commit-btn-hide {
+  bottom: -100rpx;
+}
+.commit-txt {
+  flex: 0 0 176rpx;
+  padding-right: 20rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: hidden;
+  font-size: 30rpx;
+  line-height: 88rpx;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: right;
+}
+.commit-input-wrap {
+  flex: 1;
+  -webkit-flex: 1;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  padding-right: 20rpx;
+  background-color: #1c1d21;
+}
+.commit-input {
+  display: block;
+  font-size: 30rpx;
+  line-height: 64rpx;
+  height: 64rpx;
+  background-color: transparent;
+}
+.commit-blur {
+  background-color: #fff;
+}

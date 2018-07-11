@@ -26,10 +26,93 @@ Page({
       ],
       readNum: 14122,
       collectionNum: 0,
-      commentNum: 123
+      comments: {
+        hotComment: [
+          {
+            id: 0,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 1,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 2,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 3,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 4,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          }
+        ],
+        newComment: [
+          {
+            id: 0,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 1,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 2,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 3,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          },
+          {
+            id: 4,
+            avatar: '../../image/avatar.jpg',
+            name: '慢半拍',
+            time: '刚刚',
+            agreeNum: 4,
+            commentTxt: '打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了打算离开就分了手机发了就死定了'
+          }
+        ]
+      }
     },
-    commitFlag: '',
-    commitTxt: '',
     isShow: '',
     touchInit: {
       pageX: 0,
@@ -102,26 +185,6 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  commentFocus (e) {
-    this.setData({
-      commitFlag: 'commit-blur'
-    })
-  },
-  commentBlur (e) {
-    this.setData({
-      commitFlag: ''
-    })
-  },
-  commitInput (e) {
-    this.setData({
-      commitTxt: e.detail.value
-    })
-  },
-  commitConfirm (e) {
-    this.setData({
-      commitTxt: ''
-    })
   },
   pageStart (e) {
     if (!this.data.touchInit.isTouch) return false

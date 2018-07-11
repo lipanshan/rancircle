@@ -8,10 +8,10 @@
       <text class="name">{{info.name}}</text>
       <text class="time">{{info.time}}</text>
     </view>
-    <view class="text">{{info.commentTxt}}</view>
+    <view class="text"><text>{{info.commentTxt}}</text></view>
   </view>
   <view class="agree-wrap">
     <text class="agree-num">{{info.agreeNum}}</text>
-    <text bindtap="addAgree" data-info="{{info}}" class=" icon icon-agree"></text>
+    <text bindtap="addAgree" data-info="{{info}}" class=" icon icon-agree {{active}}"></text>
   </view>
 </view>

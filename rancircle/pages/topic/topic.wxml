@@ -1,0 +1,21 @@
+<!--pages/topic/topic.wxml-->
+<scroll-view scroll-y class="list-wrap">
+  <block wx:for="{{topicList}}" wx:key="title">
+    <navigator url="../topicdetail/topicdetail?id={{item.title}}" bindtap="toptioDetail" class="list-item">
+      <view class="title">
+        #
+        <text>{{item.title}}</text>#
+      </view>
+      <view class="hot-num">
+        热度{{item.hotNum}}
+      </view>
+      <view class="image-list-wrap">
+        <view wx:for="{{item.imgs}}" wx:key="imageItem" wx:for-item="imageItem" class="image-item">
+          <view class="image-wrap">
+            <image src="{{imageItem}}" class="image"></image>
+          </view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</scroll-view>

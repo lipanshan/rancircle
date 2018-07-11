@@ -7,7 +7,9 @@
     "pages/user/user",
     "pages/menu/menu",
     "pages/menudetail/menudetail",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/topic/topic",
+    "pages/topicdetail/topicdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -3,18 +3,25 @@
   <text class="comment-title">热门评论</text>
   <view class="line"></view>
 </view>
-<block >
-  <view class="nothing">暂无跟帖数据</view>
-</block>
+<view wx:if="{{info.hotComment.length}}" class="comment-list">
+  <block wx:for="{{info.hotComment}}" wx:key="id">
+    <comment-item info="{{item}}" item-type="hot" bindclickagree="triggerAgree"></comment-item>
+  </block>
+</view>
+<view wx:else class="nothing">暂无跟帖数据</view>
 <view class="comment-title-wrap">
   <text class="comment-title">最新评论</text>
   <view class="line"></view>
 </view>
-<view wx:if="{{info.newComment}}" class="comment-list">
-  <block wx:for="{{info.newComment}}" wx:key="{{index}}">
-
+<view wx:if="{{info.newComment.length}}" class="comment-list">
+  <block wx:for="{{info.newComment}}" wx:key="id">
+    <comment-item info="{{item}}" item-type="new" bindclickagree="triggerAgree"></comment-item>
   </block>
 </view>
-<block wx:else>
-  <view class="nothing">暂无跟帖数据</view>
-</block>
+<view wx:else class="nothing">暂无跟帖数据</view>
+<view class="commit-btn">
+  <label class="commit-txt">{{touchTxt}}写评论</label>
+   <view class="commit-input-wrap">
+    <input cursor-spacing="50" adjust-position confirm-type="send" bindconfirm="commitConfirm" bindinput="commitInput" value="{{commitTxt}}" class="commit-input commit-blur" type="text"></input>
+  </view> 
+</view>

@@ -1,5 +1,5 @@
 /* component/commentitem.wxss */
-@import "../common/font/font.wxss";
+@import "../../common/font/font.wxss";
 .comment-item {
   display: flex;
   display: -webkit-flex;
@@ -34,6 +34,7 @@
   line-height: 48rpx;
 }
 .name {
+  margin-right: 24rpx;
   color: #111111;
 }
 .time {
@@ -46,7 +47,9 @@
   color: #7e7e7e;
 }
 .agree-wrap {
+  position: relative;
   margin-top: 20rpx;
+  padding-right: 38rpx;
 }
 .agree-num {
   padding-right: 10rpx;
@@ -54,8 +57,29 @@
   line-height: 28rpx;
   color: #8f8f8f;
 }
+@keyframes iconScale {
+  0% {
+    transform-origin: center center;
+    transform: scale(1);
+  }
+  50% {
+    transform-origin: center center;
+    transform: scale(1.5);
+  }
+  100% {
+    transform-origin: center center;
+    transform: scale(1);
+  }
+}
 .icon-agree {
+  position: absolute;
+  top: 0;
+  right: 0;
   font-size: 38rpx;
   line-height: 38rpx;
+  color: #7e7e7e;
+}
+.icon-agree-active {
   color: #92b3e8;
+  animation: iconScale 1s linear;
 }

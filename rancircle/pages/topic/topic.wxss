@@ -1,0 +1,54 @@
+/* pages/topic/topic.wxss */
+.list-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  background-color: #2a292f;
+}
+.list-item {
+  margin-top: 20rpx;
+  padding-top: 37rpx;
+  background-color: #343339;
+}
+.title {
+  font-size: 34rpx;
+  line-height: 54rpx;
+  text-align: center;
+  color: #fff;
+}
+.hot-num {
+  font-size: 24rpx;
+  line-height: 32rpx;
+  text-align: center;
+  color: #6b6a70;
+}
+.image-list-wrap {
+  margin-top: 18rpx;
+  margin-right: -10rpx;
+  padding: 0 18rpx 18rpx;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: nowrap;
+}
+.image-item {
+  flex: 1;
+  padding-right: 10rpx;
+}
+.image-wrap {
+  position: relative;
+  border: 2rpx solid rgba(52, 51, 57, 0.4);
+  padding-bottom: 100%;
+  height: 0;
+  overflow: hidden;
+}
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
