@@ -130,8 +130,7 @@
 }
 .comment-wrap,
 .like-wrap {
-  flex: 0 0 189rpx;
-  width: 189rpx;
+  margin-right: 40rpx;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

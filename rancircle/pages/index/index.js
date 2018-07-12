@@ -219,7 +219,6 @@ Page({
     }
   },
   getUserInfo: function(e) {
-    console.log(e)
     app.globalData.userInfo = e.detail.userInfo
     this.setData({
       userInfo: e.detail.userInfo,
@@ -227,14 +226,13 @@ Page({
     })
   },
   swiperChange (e) {
-    console.log(e)
+    // console.log(e)
   },
   scrollView (e) {
-    console.log(e)
+    // console.log(e)
   },
   addFavorite (e) {
     const currentItem = e.detail.currentTarget.dataset.favoriteInfo
-    console.log(currentItem)
     const index = this.data.dynamics.findIndex((item) => {
       return item.userName === currentItem.userName
     })

@@ -29,8 +29,8 @@
     </block>
   </view>
   <view class="bottom-wrap">
-    <view class="like-wrap">
-      <icon bindtap="addFavorite" data-favorite-info="{{info}}" class="like-icon icon-heart {{likeActive}}"></icon>{{info.favorite}}</view>
+    <view class="like-wrap"  bindtap="addFavorite" data-favorite-info="{{info}}">
+      <icon class="like-icon icon-heart {{likeActive}}"></icon>{{info.favorite}}</view>
     <view class="comment-wrap">
       <icon class="comment-icon icon-comment-2"></icon>{{info.talk}}</view>
     <view class="more-wrap">
