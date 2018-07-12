@@ -23,7 +23,7 @@
   <view class="scroll-wrap">
     <view class="scroll-content">
       <scroll-view scroll-x scroll-left="50" scroll-width-animation bindscroll="scrollView" class="scroll-view-content">
-        <navigator open-type="navigateTo" url="../menu/menu?id={{index}}" wx:for="{{scrollViews}}" wx:key="item.text" class="view-scroll-item">{{item.text}}
+        <navigator hover-class="none" open-type="navigateTo" url="../menu/menu?id={{index}}" wx:for="{{scrollViews}}" wx:key="item.text" class="view-scroll-item">{{item.text}}
           <view class="{{item.icon}} icon"></view>
         </navigator>
       </scroll-view>
@@ -33,21 +33,21 @@
     <view class="title">
       <text>精选话题</text>
     </view>
-    <navigator url="../topic/topic?id=all" class="more-wrap">
+    <navigator hover-class="none" url="../topic/topic?id=all" class="more-wrap">
       <text class="more-txt">更多</text>
       <text class="icon-more more-world"></text>
     </navigator>
   </view>
   <view class="topic-list">
     <block wx:for="{{topicList}}" wx:key="item" >
-      <navigator url="../topic/topic?id={{item}}" class="topic-item">
+      <navigator hover-class="none" url="../topicdetail/topicdetail?id={{item}}" class="topic-item">
         <text >{{item}}</text>
       </navigator>
     </block>
   </view>
   <view class="info-list">
-    <block wx:for="{{dynamics}}" wx:key="{{item.userName}}">
-      <info-item info="{{item}}"></info-item>
+    <block wx:for="{{dynamics}}" wx:key="userName">
+      <info-item bindaddFavoriteNum="addFavorite" info="{{item}}"></info-item>
     </block>
   </view>
 </view>

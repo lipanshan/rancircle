@@ -53,7 +53,7 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg'
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -66,8 +66,8 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -80,9 +80,9 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -95,10 +95,10 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -111,12 +111,12 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -129,13 +129,13 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -148,14 +148,14 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -168,15 +168,15 @@ Page({
         title: '今天，我是浏览等级分类',
         subtitle: '跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊跑班今天开始打卡，小伙伴们加油啊，跑班今天开始打卡，小伙伴们加油啊',
         images: [
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg',
-          'show5.jpg'
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg',
+          '../../image/show5.jpg'
         ],
         favorite: '1000',
         talk: '179'
@@ -231,5 +231,16 @@ Page({
   },
   scrollView (e) {
     console.log(e)
+  },
+  addFavorite (e) {
+    const currentItem = e.detail.currentTarget.dataset.favoriteInfo
+    console.log(currentItem)
+    const index = this.data.dynamics.findIndex((item) => {
+      return item.userName === currentItem.userName
+    })
+    const key = `dynamics[${index}].favorite`
+    this.setData({
+      [key]: +this.data.dynamics[index].favorite + 1
+    })
   }
 })

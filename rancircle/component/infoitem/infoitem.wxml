@@ -3,7 +3,7 @@
   <view class="avatar-wrapper">
     <view class="avatar-wrap">
       <view class="avatar-img">
-        <image class="avatar-image" src="../../image/avatar.jpg"></image>
+        <image lazy-load="true" class="avatar-image" src="../../image/avatar.jpg"></image>
       </view>
       <view class="avatar-txt">
         <text class="name">{{info.userName}}</text>
@@ -21,16 +21,20 @@
   </view>
   <view class="image-list">
     <block wx:for="{{info.images}}" wx:key="{{item}}">
-        <view class="image-item {{info.images.length < 3 ? 'layout-flex' : 'layout-percent'}}">
-          <view class="image-box" bindtap="seeBagImage">
-            <image class="show-img" src="../../image/{{item}}"></image>
-          </view>
+      <view class="image-item {{info.images.length < 3 ? 'layout-flex' : 'layout-percent'}}">
+        <view class="image-box" data-current="{{index}}" data-current-url="{{item}}" data-image-list="{{info.images}}" bindtap="previewImage">
+          <image lazy-load="true" class="show-img" src="{{item}}"></image>
         </view>
-      </block>
+      </view>
+    </block>
   </view>
   <view class="bottom-wrap">
-    <view class="like-wrap"><icon class="like-icon icon-heart"></icon>{{info.favorite}}</view>
-    <view class="comment-wrap"><icon class="comment-icon icon-comment-2"></icon>{{info.talk}}</view>
-    <view class="more-wrap"><icon class="more-icon">┅</icon></view>
+    <view class="like-wrap">
+      <icon bindtap="addFavorite" data-favorite-info="{{info}}" class="like-icon icon-heart {{likeActive}}"></icon>{{info.favorite}}</view>
+    <view class="comment-wrap">
+      <icon class="comment-icon icon-comment-2"></icon>{{info.talk}}</view>
+    <view class="more-wrap">
+      <icon class="more-icon">┅</icon>
+    </view>
   </view>
 </view>

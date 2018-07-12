@@ -1,11 +1,11 @@
 <!--pages/topic/topic.wxml-->
 <scroll-view scroll-y class="list-wrap">
   <block wx:for="{{topicList}}" wx:key="title">
-    <navigator url="../topicdetail/topicdetail?id={{item.title}}" bindtap="toptioDetail" class="list-item">
-      <view class="title">
+    <view class="list-item">
+      <navigator hover-class="none" url="../topicdetail/topicdetail?id={{item.title}}"  class="title">
         #
         <text>{{item.title}}</text>#
-      </view>
+      </navigator>
       <view class="hot-num">
         热度{{item.hotNum}}
       </view>
@@ -16,6 +16,6 @@
           </view>
         </view>
       </view>
-    </navigator>
+    </view>
   </block>
 </scroll-view>

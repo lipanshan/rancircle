@@ -11,7 +11,7 @@
   <view class="menu-content {{moveStyle}}">
     <scroll-view id="contentItemLeft" scroll-y scroll-with-animation class="list">
       <block wx:for="{{content[currentMenuLeft]}}" wx:key="{{index}}">
-        <navigator open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
+        <navigator hover-class="none" open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
           <view class="avatar-wrap">
             <view class="avatar-box">
               <image class="list-item-img" src="{{item.avatar}}"></image>
@@ -27,7 +27,7 @@
     </scroll-view>
     <scroll-view id="contentItemRight" scroll-y scroll-with-animation class="list">
       <block  wx:for="{{content[currentMenuRight]}}" wx:key="{{index}}">
-        <navigator open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
+        <navigator hover-class="none" open-type="navigateTo" url="../menudetail/menudetail?id={{index}}" class="list-item">
           <view class="avatar-wrap">
             <view class="avatar-box">
               <image class="list-item-img" src="{{item.avatar}}"></image>

@@ -1,2 +1,40 @@
 <!--pages/toptiodetail/topicdetail.wxml-->
-<text>pages/toptiodetail/topicdetail.wxml</text>
+<view class="header">
+  <view class="bg">
+    <image lazy-load="true" class="bg-image" src="{{info.bg}}"></image>
+    <view class="top-title">
+      <view class="h1">#{{info.title}}#</view>
+      <view class="hot-txt">热度{{info.hotNum}}</view>
+    </view>
+  </view>
+  <view class="intro">
+    <text>{{info.intro}}</text>
+  </view>
+  <view class="question-answer">
+    <text class="question {{isCollapse}}">{{info.question}}</text>
+    <button hover-class="none" bindtap="textToggleCollapse" class="collapse-btn">展开</button>
+  </view>
+</view>
+<view class="switch-tag">
+  <view class="navigator-wrap">
+    <view bindtap="switchTap" data-current="0" class="navigator-item {{navigatorActive === 0 ? 'navigator-item-active': ''}}" hover-class="none">
+      <text>热门</text>
+    </view>
+    <view bindtap="switchTap" data-current="1" class="navigator-item {{navigatorActive === 1 ? 'navigator-item-active': ''}}" hover-class="none">
+      <text>最新</text>
+    </view>
+  </view>
+</view>
+<view class="splite-line"></view>
+<view class="list-wrap">
+  <view class="list-item {{navigatorActive === 0 ? 'show' : ''}}">
+    <block wx:for="{{info.hot}}" wx:key="userName">
+      <info-item bindaddFavoriteNum="addFavorite" info="{{item}}"></info-item>
+    </block>
+  </view>
+   <view class="list-item {{navigatorActive === 1 ? 'show' : ''}}">
+    <block wx:for="{{info.last}}" wx:key="userName">
+      <info-item bindaddFavoriteNum="addFavorite" info="{{item}}"></info-item>
+    </block>
+  </view>
+</view>

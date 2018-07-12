@@ -150,3 +150,6 @@
   line-height: 52rpx;
   color: #928e8d;
 }
+.like-icon-active {
+  color: #cb4b58;
+}
