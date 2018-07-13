@@ -31,10 +31,7 @@
   <view class="bottom-wrap">
     <view class="like-wrap"  bindtap="addFavorite" data-favorite-info="{{info}}">
       <icon class="like-icon icon-heart {{likeActive}}"></icon>{{info.favorite}}</view>
-    <view class="comment-wrap">
-      <icon class="comment-icon icon-comment-2"></icon>{{info.talk}}</view>
-    <view class="more-wrap">
-      <icon class="more-icon">┅</icon>
-    </view>
+    <navigator hover-class="none" data-info="{{info.talk}}" url="../personalinfo/personalinfo?id={{info.userName}}" class="comment-wrap">
+      <icon class="comment-icon icon-comment-2"></icon>{{info.talk.length}}</navigator>
   </view>
 </view>

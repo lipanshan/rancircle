@@ -78,7 +78,7 @@
 .toggle-btn {
   padding: 0;
   padding-top: 12rpx;
-  display: block;
+  display: inline-block;
   font-size: 30rpx;
   line-height: 42rpx;
   color: rgba(225, 225, 225, 0.2);

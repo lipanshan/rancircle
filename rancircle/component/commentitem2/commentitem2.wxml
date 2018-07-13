@@ -1,0 +1,17 @@
+<!--component/commentitem2/commentitem2.wxml-->
+<view class="list-item">
+  <view class="left-avatar">
+    <view class="avatar">
+      <image src="{{info.avatar}}"></image>
+    </view>
+  </view>
+  <view class="content">
+    <view class="name-wrap">
+      <text class="name">{{info.name}}</text>
+      <text class="time">{{info.time}}</text>
+    </view>
+    <view class="comment">
+      <text>{{info.text}}</text>
+    </view>
+  </view>
+</view>

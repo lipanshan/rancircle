@@ -20,7 +20,6 @@ Component({
   data: {
     active: ''
   },
-
   /**
    * 组件的方法列表
    */

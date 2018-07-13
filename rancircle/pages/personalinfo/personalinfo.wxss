@@ -1,0 +1,10 @@
+/* pages/personalInfo/personalinfo.wxss */
+.list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 30rpx;
+  overflow: hidden;
+}

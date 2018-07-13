@@ -1,0 +1,6 @@
+<!--pages/personalInfo/personalinfo.wxml-->
+<scroll-view scroll-with-animation scroll-y class="list">
+  <block wx:for="{{currentList}}" wx:key="userName">
+    <comment-item info="{{item}}"></comment-item>
+  </block>
+</scroll-view>

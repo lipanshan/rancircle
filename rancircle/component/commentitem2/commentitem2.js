@@ -1,4 +1,4 @@
-// component/personalpage/personalpage.js
+// component/commentitem2/commentitem2.js
 Component({
   /**
    * 组件的属性列表

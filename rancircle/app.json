@@ -9,7 +9,8 @@
     "pages/menudetail/menudetail",
     "pages/comment/comment",
     "pages/topic/topic",
-    "pages/topicdetail/topicdetail"
+    "pages/topicdetail/topicdetail",
+    "pages/personalinfo/personalinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
