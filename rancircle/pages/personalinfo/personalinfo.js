@@ -16,6 +16,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -71,6 +103,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+          ],
         talk: [
           {
             id: 0,
@@ -127,6 +191,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -184,6 +280,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -243,6 +371,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -303,6 +463,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -364,6 +556,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -426,6 +650,38 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
+        favoriteList: [
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          },
+          {
+            avatar: '../../image/avatar.jpg',
+          }
+        ],
         talk: [
           {
             id: 0,
@@ -470,19 +726,19 @@ Page({
         ]
       }
     ],
-    currentList: []
+    current: [],
+    flag: 'nowrap'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.log(options)
       const list = this.data.dynamics.find((item) => {
         return item.userName === options.id
       })
       this.setData({
-        currentList: list.talk
+        current: list
       })
   },
 
@@ -533,5 +789,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  toggleMore (e) {
+    let flag = this.data.flag ? '': 'nowrap';
+    this.setData({
+      flag: flag
+    })
+  },
+  previewImage (e) {
+    console.log(e)
+    wx.previewImage({
+      current: e.currentTarget.dataset.currentUrl,
+      urls: e.currentTarget.dataset.imageList,
+    })
   }
 })

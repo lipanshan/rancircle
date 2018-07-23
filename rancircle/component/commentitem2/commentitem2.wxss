@@ -1,1 +1,53 @@
 /* component/commentitem2/commentitem2.wxss */
+.list-item {
+  display: -webkit-flex;
+  display: flex;
+  padding: 16rpx 30rpx;
+  background-color: #343339;
+}
+.left-avatar {
+  flex: 0 0 70rpx;
+  width: 70rpx;
+}
+.avatar {
+  position: relative;
+  padding-bottom: 100%;
+}
+.avatar > image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.content {
+  -webkit-flex: 1;
+  flex: 1;
+  display: -webkit-flex;
+  display: flex;
+}
+.name-wrap {
+  -webkit-flex: 1;
+  flex: 1;
+  padding-left: 20rpx;
+}
+.time,
+.name  {
+  display: block;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  color: #fff;  
+}
+.time {
+  color: rgba(255, 255, 255, 0.6);
+}
+.comment {
+  flex: 0 0 100rpx;
+  width: 100rpx;
+  text-align: right;
+  font-size: 18rpx;
+  line-height: 30rpx;
+  color: rgba(255, 255, 255, 0.4);
+}

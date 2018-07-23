@@ -8,10 +8,10 @@
   <view class="content">
     <view class="name-wrap">
       <text class="name">{{info.name}}</text>
-      <text class="time">{{info.time}}</text>
+      <text class="time">{{info.commentTxt}}</text>
     </view>
     <view class="comment">
-      <text>{{info.text}}</text>
+      <text>{{info.time}}</text>
     </view>
   </view>
 </view>

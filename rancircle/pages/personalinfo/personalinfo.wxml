@@ -1,6 +1,80 @@
 <!--pages/personalInfo/personalinfo.wxml-->
-<scroll-view scroll-with-animation scroll-y class="list">
-  <block wx:for="{{currentList}}" wx:key="userName">
+<scroll-view scroll-y class="container">
+  <view class="info-item">
+    <view class="avatar-wrapper">
+      <view class="avatar-wrap">
+        <view class="avatar-img">
+          <image lazy-load="true" class="avatar-image" src="{{current.avatar}}"></image>
+        </view>
+        <view class="avatar-txt">
+          <text class="name">{{current.userName}}</text>
+          <view class="time">{{current.time}}</view>
+        </view>
+      </view>
+      <view class="address">
+        <text>{{current.address}}</text>
+      </view>
+    </view>
+    <view class="say-wrap">{{current.title}}</view>
+    <view class="subsay-wrap">
+      <text class="sub-txt {{flag}}">{{current.subtitle}}</text>
+      <button class="toggle-btn" bindtap="toggleMore">展开</button>
+    </view>
+    <view class="image-list">
+      <block wx:for="{{current.images}}" wx:key="{{item}}">
+        <view class="image-item {{current.images.length < 3 ? 'layout-flex' : 'layout-percent'}}">
+          <view class="image-box" data-image-list="{{current.images}}" data-current="{{index}}" data-current-url="{{item}}"  bindtap="previewImage">
+            <image lazy-load="true" class="show-img" src="{{item}}"></image>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view class="run-info">
+      <view class="scale-image">
+        <image src=""></image>
+      </view>
+      <view class="run-intro">
+        <view class="run-txt">
+          <text>跑了5.00KM，速度：5’42'用时：28分钟32秒</text>
+        </view>
+      </view>
+      <view class="more">
+        <view class="icon-more more-world"></view>
+      </view>
+    </view>
+  </view>
+  <view class="separate-line"></view>
+  <view class="favorate-list-wrap">
+    <view class="favorate-num">
+      <text>{{current.favoriteList.length}}赞:</text>
+    </view>
+    <view class="favorite-list">
+      <view class="favorite-wrap">
+        <block wx:for="{{current.favoriteList}}" wx:key="index">
+          <view class="favorite-img-wrap">
+            <image src="{{item.avatar}}"></image>
+          </view>
+        </block>
+      </view>
+    </view>
+    <navigator open-type="navigate" url="" class="favorite-list-more">
+      <text class="icon-more more-world"></text>
+    </navigator>
+  </view>
+  <view class="separate-line"></view>
+  <view class="separate-wrap">
+    <view class="comment-txt">{{current.talk.length}}条评论</view>
+    <view class="line"></view>
+  </view>
+  <block wx:for="{{current.talk}}" wx:key="userName">
     <comment-item info="{{item}}"></comment-item>
   </block>
 </scroll-view>
+<view class="input-wrap">
+  <view class="input-group">
+    <input type="text"></input>
+    <view class="favorite-icon-wrap">
+      <text class="icon-heart "></text>
+    </view>
+  </view>
+</view>
