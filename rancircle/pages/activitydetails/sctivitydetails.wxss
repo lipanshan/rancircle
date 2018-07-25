@@ -1,4 +1,5 @@
 /* pages/activitydetails/sctivitydetails.wxss */
+@import '../../common/font/font.wxss';
 .content {
   position: absolute;
   top: 0; 
@@ -42,6 +43,40 @@
   font-size: 30rpx;
   line-height: 50rpx;
   color: #fff;
+}
+.h1 {
+  padding: 0 24rpx;
+  font-size: 0;
+}
+.h1-txt {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 100rpx;
+  line-height: 120rpx;
+  color: #d34d4e;
+}
+.km {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 36rpx;
+  line-height: 56rpx;
+  color: #7b7b7b;
+}
+.task-title {
+  padding: 0 24rpx;
+  font-size: 24rpx;
+  line-height: 56rpx;
+  color: #9a999f;
+}
+.task-intro {
+  padding: 0 24rpx;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.mileage {
+  -webkit-flex: 1;
+  flex: 1;
 }
 .active-btn-wrap {
   position: absolute;

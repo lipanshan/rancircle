@@ -11,7 +11,7 @@
       里程累计
     </view>
     <view class="h1">
-      <text>77.70</text>KM
+      <text class="h1-txt">77.70</text><text class="km">KM</text>
     </view>
     <view class="task-title">任务要求</view>
     <view class="task-intro">
@@ -19,7 +19,7 @@
         <text></text>
       </view>
       <view class="address-line">
-        <text></text>
+        <text class="icon-address"></text>
       </view>
       <view class="use-time">
         <text></text>
