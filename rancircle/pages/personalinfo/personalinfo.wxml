@@ -72,9 +72,9 @@
 </scroll-view>
 <view class="input-wrap">
   <view class="input-group">
-    <input type="text"></input>
+    <input bindblur="addComments" bindinput="updateValue" value="{{valueTxt}}" type="text"></input>
     <view class="favorite-icon-wrap">
-      <text class="icon-heart "></text>
+      <text bindtap="addFavorite" class="icon-heart {{isHeart}}"></text>
     </view>
   </view>
 </view>

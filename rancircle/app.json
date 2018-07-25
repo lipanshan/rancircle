@@ -10,7 +10,9 @@
     "pages/comment/comment",
     "pages/topic/topic",
     "pages/topicdetail/topicdetail",
-    "pages/personalinfo/personalinfo"
+    "pages/personalinfo/personalinfo",
+    "pages/fighting/fighting",
+    "pages/activitydetails/sctivitydetails"
   ],
   "window": {
     "backgroundTextStyle": "light",

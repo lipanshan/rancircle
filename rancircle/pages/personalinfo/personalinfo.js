@@ -1,11 +1,11 @@
+const { formatTime } = require('../../utils/date.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    dynamics: [
-      {
+    dynamics: [{
         avatar: '../../image/avatar.jpg',
         userName: '樱木花道8',
         time: '06:56',
@@ -16,8 +16,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -48,8 +47,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -103,8 +101,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -134,9 +131,8 @@ Page({
           {
             avatar: '../../image/avatar.jpg',
           }
-          ],
-        talk: [
-          {
+        ],
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -191,8 +187,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -223,8 +218,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -280,8 +274,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -312,8 +305,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -371,8 +363,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -403,8 +394,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -463,8 +453,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -495,8 +484,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -556,8 +544,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -588,8 +575,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -650,8 +636,7 @@ Page({
           '../../image/show5.jpg'
         ],
         favorite: '1000',
-        favoriteList: [
-          {
+        favoriteList: [{
             avatar: '../../image/avatar.jpg',
           },
           {
@@ -682,8 +667,7 @@ Page({
             avatar: '../../image/avatar.jpg',
           }
         ],
-        talk: [
-          {
+        talk: [{
             id: 0,
             avatar: '../../image/avatar.jpg',
             name: '慢半拍',
@@ -727,80 +711,136 @@ Page({
       }
     ],
     current: [],
-    flag: 'nowrap'
+    flag: 'nowrap',
+    isHeart: '',
+    userInfo: '',
+    valueTxt: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-      const list = this.data.dynamics.find((item) => {
-        return item.userName === options.id
-      })
-      this.setData({
-        current: list
-      })
+  onLoad: function(options) {
+    const list = this.data.dynamics.find((item) => {
+      return item.userName === options.id
+    })
+    this.setData({
+      current: list
+    })
+    let that = this;
+    wx.getUserInfo({
+      success(res) {
+        that.setData({
+          userInfo: {
+            avatar: res.userInfo.avatarUrl,
+            nickName: res.userInfo.nickName,
+            iv: res.iv,
+            id: options.id
+          }
+        })
+      }
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   },
-  toggleMore (e) {
-    let flag = this.data.flag ? '': 'nowrap';
+  toggleMore(e) {
+    let flag = this.data.flag ? '' : 'nowrap';
     this.setData({
       flag: flag
     })
   },
-  previewImage (e) {
-    console.log(e)
+  previewImage(e) {
     wx.previewImage({
       current: e.currentTarget.dataset.currentUrl,
       urls: e.currentTarget.dataset.imageList,
+    })
+  },
+  updateValue (e) {
+    this.setData({
+      valueTxt: e.detail.value
+    })
+  },
+  addComments(e) {
+    const infoObj = {
+      id: this.data.current.talk.length * 2,
+      agreeNum: 6,
+      avatar: this.data.userInfo.avatar,
+      nickName: this.data.userInfo.nickName,
+      time: (() => {
+         return formatTime(new Date())
+      })(),
+      commentTxt: e.detail.value
+    }
+    const newArr =JSON.parse(JSON.stringify(this.data.current.talk));
+    const key = 'current.talk';
+    newArr.unshift(infoObj);
+    this.setData({
+      [key]: newArr,
+      valueTxt: ''
+    });
+    
+  },
+  addFavorite(e) {
+    let arr = JSON.parse(JSON.stringify(this.data.current)).favoriteList;
+    let activeCls = '';
+    const key = 'current.favoriteList';
+    if (this.data.isHeart) {
+      arr.shift();
+      activeCls = '';
+    } else {
+      arr.unshift(this.data.userInfo);
+      activeCls = 'add-heart';
+    }
+    this.setData({
+      isHeart: activeCls,
+      [key]: arr
     })
   }
 })

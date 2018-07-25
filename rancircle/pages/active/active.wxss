@@ -1,1 +1,124 @@
 /* pages/active/active.wxss */
+@import '../../common/font/scancode.wxss';
+@import '../../common/font/font.wxss';
+.header {
+  padding-left: 36rpx;
+  padding-right: 36rpx;
+  height: 126rpx;
+  background-color: #343339;
+  color: #ffffff;
+}
+.search-wrap {
+  position: relative;
+  white-space: nowrap;
+  height: 80rpx;
+}
+.find {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 62rpx;
+  line-height: 80rpx;
+}
+.scancode {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 14rpx;
+  float: right;
+  font-size: 42rpx;
+  line-height: 80rpx;
+  color: #ffffff;
+  font-weight: 600;
+}
+.subtitle {
+  font-size: 28rpx;
+  line-height: 46rpx;
+  color: #8c8b91;
+}
+.menu {
+  padding: 115rpx 30rpx 0;
+  background-color: #343339;
+}
+.menu-list {
+  padding: 0 38rpx 20rpx;
+  border-bottom: 1rpx solid #000;
+  display: flex;
+  display: -webkit-flex;
+}
+.menu-item {
+  flex: 1;
+  -webkit-flex: 1;
+}
+.menu-item .icon {
+  display: block;
+  font-size: 74rpx;
+  line-height: 74rpx;
+  color: #fff;
+  text-align: center;
+}
+.p {
+  font-size: 28rpx;
+  line-height: 68rpx;
+  text-align: center;
+  color: #fff;
+}
+.title-wrap {
+  padding: 60rpx 30rpx 40rpx;
+  background-color: #343339;
+  display: -webkit-flex;
+  display: flex;
+}
+.title-name {
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 0;
+}
+.title-name > text {
+  font-size: 46rpx;
+  line-height: 86rpx;
+  color: #fff;
+  font-weight: 600;
+}
+.more-wrap {
+  margin-top: 20rpx;
+  font-size: 0;
+}
+.more-txt {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 26rpx;
+  line-height: 46rpx;
+  color: rgba(255, 255, 255, 1);
+}
+.icon-more {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 38rpx;
+  line-height: 46rpx;
+  color: rgba(255, 255, 255, 0.4);
+}
+.content {
+  padding: 0 30rpx;
+  background-color: #343339;
+}
+.image-wrap {
+  width: 100%;
+  border-radius: 10rpx;
+}
+.image-wrap > image {
+  width: 100%;
+  height: 360rpx;
+}
+.h2 {
+  display: block;
+  font-size: 35rpx;
+  line-height: 57rpx;
+  color: #fff;
+}
+.h3 {
+  display: block;
+  font-size: 24rpx;
+  line-height: 46rpx;
+  color: rgba(255, 255, 255, 0.4);
+}

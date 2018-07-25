@@ -344,6 +344,7 @@
   height: 30rpx;
   padding: 20rpx 10rpx;
   min-height: auto;
+  color: #fff;
 }
 .favorite-icon-wrap {
   flex: 0 0 79rpx;
@@ -354,4 +355,7 @@
   font-size: 37rpx;
   line-height: 70rpx;
   color: #928e8d;
+}
+.favorite-icon-wrap .add-heart {
+  color: red;
 }

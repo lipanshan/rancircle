@@ -1,0 +1,62 @@
+/* pages/activitydetails/sctivitydetails.wxss */
+.content {
+  position: absolute;
+  top: 0; 
+  right: 0;
+  bottom: 98rpx;
+  left: 0;
+  background-color: #2a292f;
+  overflow: hidden;
+}
+.header-img {
+  height: 262rpx;
+  overflow: hidden;
+}
+.header-img > image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.img-txt {
+  padding: 3rpx 30rpx 0;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #fff;
+}
+.hot {
+  color: #db5f69
+}
+.task-wrap {
+  margin: 20rpx 30rpx 0;
+  background-color: #343339;
+}
+.task-progress {
+  padding: 0 20rpx;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.6);
+}
+.title {
+  padding: 8rpx 22rpx 0;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #fff;
+}
+.active-btn-wrap {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:-webkit-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
+  background:-moz-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
+  background:-ms-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
+  background:repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
+}
+.active-btn {
+  background: none;
+  color: #fff;
+}
+.active-btn::after {
+  border-color: transparent;
+}

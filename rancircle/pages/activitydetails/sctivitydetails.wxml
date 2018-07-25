@@ -1,0 +1,35 @@
+<!--pages/activitydetails/sctivitydetails.wxml-->
+<scroll-view scroll-y scroll-with-animation class="content">
+  <view class="header-img">
+    <image src="{{info.img}}"></image>
+  </view>
+  <view class="img-txt">
+    <text class="hot">{{info.hot}}</text>剩余{{info.time}}天</view>
+  <view class="task-wrap">
+    <view class="task-progress">任务1/1</view>
+    <view class="title">
+      里程累计
+    </view>
+    <view class="h1">
+      <text>77.70</text>KM
+    </view>
+    <view class="task-title">任务要求</view>
+    <view class="task-intro">
+      <view class="mileage">
+        <text></text>
+      </view>
+      <view class="address-line">
+        <text></text>
+      </view>
+      <view class="use-time">
+        <text></text>
+      </view>
+      <view class="address">
+        <text></text>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="active-btn-wrap">
+  <button class="active-btn">参与挑战</button>
+</view>

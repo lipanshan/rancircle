@@ -1,18 +1,21 @@
-// pages/active/active.js
+// pages/activitydetails/sctivitydetails.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    info: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    console.log(options.id);
+    this.setData({
+      info: JSON.parse(options.id)
+    })
   },
 
   /**
@@ -62,13 +65,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  scanCode (e) {
-    wx.scanCode({
-      onlyFromCamera: true,
-      success (e) {
-        console.log(e)
-      }
-    })
   }
 })

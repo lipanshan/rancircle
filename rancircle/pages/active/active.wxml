@@ -1,2 +1,80 @@
 <!--pages/active/active.wxml-->
-<text>pages/active/active.wxml</text>
+<view class="header">
+  <view class="search-wrap">
+    <text class="find">活动</text>
+    <text bindtap="scanCode" class="icon-scancode scancode"></text>
+  </view>
+  <view class="subtitle">
+    <text>跑步玩法任你挑选</text>
+  </view>
+</view>
+<view class="menu">
+  <view class="menu-list">
+    <navigator url="../fighting/fighting" hover-class="none" open-type="navigate" class="menu-item">
+      <text class="icon icon-fighting"></text>
+      <view class="p">
+        <text>挑战</text>
+      </view>
+    </navigator>
+    <view class="menu-item">
+      <text class="icon icon-trophy"></text>
+      <navigator class="p">
+        <text>赛事</text>
+      </navigator>
+    </view>
+    <view class="menu-item">
+      <text class="icon icon-plain"></text>
+      <navigator class="p">
+        <text>训练</text>
+      </navigator>
+    </view>
+    <view class="menu-item">
+      <text class="icon icon-run"></text>
+      <navigator class="p">
+        <text>约定跑</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class="title-wrap">
+  <view class="title-name">
+    <text>线上马拉松</text>
+  </view>
+  <view class="more-wrap">
+    <text class="more-txt">更多</text>
+    <text class="icon icon-more"></text>
+  </view>
+</view>
+<view class="content">
+  <view class="image-wrap">
+    <image src="../../image/active-swiper.png"></image>
+  </view>
+</view>
+<view class="content">
+  <view class="image-wrap">
+    <image src="../../image/active-swiper.png"></image>
+  </view>
+</view>
+<view class="title-wrap">
+  <view class="title-name">
+    <text>跑步活动</text>
+  </view>
+  <view class="more-wrap">
+    <text class="more-txt">更多</text>
+    <text class="icon icon-more"></text>
+  </view>
+</view>
+<view class="content">
+  <text class="h2">和李晨一起跑步净化海洋</text>
+  <text class="h3">距离活动结束还有: 18天02:33</text>
+  <view class="image-wrap">
+    <image src="../../image/active-swiper.png"></image>
+  </view>
+</view>
+<view class="content">
+  <text class="h2">和李晨一起跑步净化海洋</text>
+  <text class="h3">距离活动结束还有: 18天02:33</text>
+  <view class="image-wrap">
+    <image src="../../image/active-swiper.png"></image>
+  </view>
+</view>
