@@ -12,10 +12,9 @@
   white-space: nowrap;
 }
 .tag-item {
-  margin-left: 16rpx;
   display: inline-block;
-  padding: 0;
-  width: 134rpx;
+  vertical-align: top;
+  padding: 0 16rpx;
   color: rgba(255, 255, 255, 0.4);
   font-size: 28rpx;
   line-height: 80rpx;
@@ -32,7 +31,6 @@
   position: absolute;
   top:76rpx;
   left: 0;
-  width: 134rpx;
   height: 4rpx;
   background-color: #cb4c5d;
   transition: all 0.3s linear;
@@ -44,23 +42,10 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
-}
-.menu-content {
   white-space: nowrap;
+}
+.swiper-wrap {
   height: 100%;
-  font-size: 0;
-  
-}
-.menu-content-left {
-  transition: all 0.3s linear;
-  transform: translate3d(-100%, 0, 0);
-}
-.menu-content-init {
-  transform: translate3d(-100%, 0, 0);
-}
-.menu-content-right{
-  transition: all 0.3s linear;
-  transform: translate3d(0, 0, 0);
 }
 .list {
   display: inline-block;

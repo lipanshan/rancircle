@@ -74,9 +74,22 @@
   display: flex;
   justify-content: space-between;
 }
+.address,
+.use-time,
+.address-line,
 .mileage {
   -webkit-flex: 1;
   flex: 1;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: rgba(255, 255, 255, 0.4);
+  padding-bottom: 21rpx;
+}
+.address> text ,
+.use-time> text ,
+.address-line> text ,
+.mileage > text {
+  margin-right: 12rpx;
 }
 .active-btn-wrap {
   position: absolute;
@@ -94,4 +107,27 @@
 }
 .active-btn::after {
   border-color: transparent;
+}
+.rule-wrap {
+  padding: 6rpx 30rpx 0;
+  background-color: #343339;
+}
+.rule-header {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+.rule-title {
+  display: block;
+  -webkit-flex: 1;
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  color: #fff;
+}
+.collapse-icon {
+  display: block;
+  font-size: 28rpx;
+  line-height: 58rpx;
+  color: rgba(255, 255, 255, 0.4);
 }

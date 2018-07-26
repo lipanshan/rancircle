@@ -16,17 +16,23 @@
     <view class="task-title">任务要求</view>
     <view class="task-intro">
       <view class="mileage">
-        <text></text>
+        <text class="icon-mileage"></text>--
       </view>
       <view class="address-line">
-        <text class="icon-address"></text>
+        <text class="icon-address-line"></text>--
       </view>
       <view class="use-time">
-        <text></text>
+        <text class="icon-meditor-time"></text>--
       </view>
       <view class="address">
-        <text></text>
+        <text class="icon-address"></text>--
       </view>
+    </view>
+  </view>
+  <view class="rule-wrap">
+    <view class="rule-header"><text class="rule-title">规则</text><text class="collapse-icon"></text></view>
+    <view class="rule-content">
+      <text class="rule-txt">夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚</text>
     </view>
   </view>
 </scroll-view>

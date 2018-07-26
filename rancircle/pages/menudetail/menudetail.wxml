@@ -1,4 +1,4 @@
-<!--pages/menudetail/menudetail.wxml-->
+<!-- pages/menudetail/menudetail.wxml -->
 <view bindtouchstart="pageStart" bindtouchcancel="pageEnd" bindtouchmove="pageTouchMove" bindtouchend="pageEnd" class="page">
   <view class="h1">{{info.title}}</view>
   <view class="subtitle">

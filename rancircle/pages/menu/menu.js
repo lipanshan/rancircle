@@ -12,7 +12,7 @@ Page({
       '提高训练',
       '跑团地带',
       '跑步故事',
-      '跑步文化'
+      '跑步文化5'
     ],
     moveLine: 0,
     currentMenuItem: 0,
@@ -362,38 +362,14 @@ Page({
       ]
     ],
     scrollLeft: 0,
-    menuItemWidt: 0,
-    itemToItemLen: 0,
-    currentMenuLeft: 0,
-    currentMenuRight: 0,
-    moveStyle: '',
-    touchInit: {
-      pageX: 0,
-      isTouch: true
-    }
-  }, 
+    duration: 300
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    const that = this
-    if (options.id) {
-      let itemLen = 0
-      const $ = wx.createSelectorQuery()
-      $.selectAll('.tag-item').boundingClientRect(function(rect) {
-        if (rect.length >= 1) {
-          const len = (rect[1].left - rect[0].left) * options.id + (rect[1].left - rect[0].right)
-          that.setData({
-            moveLine: len,
-            currentMenuItem: +options.id,
-            menuItemWidt: rect[1].left - rect[0].left,
-            itemToItemLen: rect[1].left - rect[0].right,
-            currentMenuLeft: +options.id
-          })
-        }
-      }).exec();
-    }
+    this._moveItem(options.id);
   },
 
   /**
@@ -445,103 +421,26 @@ Page({
 
   },
   tagTap(e) {
-    const index = e.currentTarget.dataset.index
-    const len = this._menuActiveItem(index)
-    const obj = {
-      moveLine: len,
+    this._moveItem(e.currentTarget.dataset.index);
+  },
+  _moveItem(index) {
+    const windowW = wx.getSystemInfoSync().windowWidth;
+    wx.createSelectorQuery().selectAll('.tag-item').boundingClientRect((res) => {
+      const len = res.slice(0, index).reduce((sum, item) => {
+        return sum + item.width
+      }, 0)
+      this.setData({
+        activeLineWidth: res[index].width,
+        currentMenuItem: index,
+        moveLine: len,
+        scrollLeft: len - windowW / 2 + res[index].width/2
+      })
+    }).exec();
+    this.setData({
       currentMenuItem: index
-    }
-    this._cntMoveLeft(index)
-    this.setData(obj)
-
-  },
-  _menuActiveItem(index) {
-    return this.data.menuItemWidt * index + this.data.itemToItemLen
-  },
-  _cntMoveLen(index) {
-    return this.data.menuItemWidt * index
-  },
-  _cntMoveLeft(index) {
-    if (index === this.data.currentMenuItem) return false
-    if (this.data.moveStyle) {
-      this.setData({
-        moveStyle: ''
-      })
-    }
-    const len = this.data.menuItemWidt * index + this.data.itemToItemLen
-    setTimeout(() => {
-      this.setData({
-        currentMenuLeft: this.data.currentMenuItem,
-        currentMenuRight: index,
-        moveStyle: 'menu-content-left',
-        moveLine: len,
-        currentMenuItem: index,
-        scrollLeft: this._cntMoveLen(index)
-      })
-    }, 100)
-  },
-  _cntMoveRight(index) {
-    if (index === this.data.currentMenuItem) return false
-    if (this.data.moveStyle) {
-      this.setData({
-        moveStyle: 'menu-content-init'
-      })
-    }
-    const that = this
-    const len = this.data.menuItemWidt * index + this.data.itemToItemLen
-    setTimeout(() => {
-      this.setData({
-        currentMenuLeft: index,
-        currentMenuRight: this.data.currentMenuItem,
-        moveStyle: 'menu-content-right',
-        moveLine: len,
-        currentMenuItem: index,
-        scrollLeft: this._cntMoveLen(index)
-      })
-    }, 100)
-  },
-  cntTouchStart(e) {
-    if (!this.data.touchInit.isTouch) return false
-    const obj = Object.assign(this.data.touchInit, {
-      pageX: e.touches[0].pageX
     })
-    this.setData(obj)
   },
-  cntTouchMove(e) {
-    if (!this.data.touchInit.isTouch) {
-      return false
-    }
-    const currentTouch = {
-      pageX: e.touches[0].pageX
-    }
-    if (currentTouch.pageX > this.data.touchInit.pageX && currentTouch.pageX - this.data.touchInit.pageX >= 10) {
-      let index = this.data.currentMenuItem - 1
-      if (index <= 0) {
-        index = 0
-      }
-      const obj = Object.assign(this.data.touchInit, {
-        isTouch: false
-      })
-      this.setData(obj)
-      this._cntMoveRight(index)
-    }
-    if (currentTouch.pageX < this.data.touchInit.pageX && currentTouch.pageX - this.data.touchInit.pageX <= -10) {
-      let index = this.data.currentMenuItem + 1
-      if (index >= this.data.menus.length) {
-        index = this.data.menus.length - 1
-      }
-      const obj = Object.assign(this.data.touchInit, {
-        isTouch: false
-      })
-      this.setData(obj)
-      this._cntMoveLeft(index)
-    }
-  },
-  cntTouchEnd(e) {
-    const obj = Object.assign(this.data.touchInit, {
-      isTouch: true,
-      pageX: 0,
-    })
-    this.setData(obj)
+  changeContent (e) {
+    this._moveItem(e.detail.current);
   }
 })
