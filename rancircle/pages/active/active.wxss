@@ -29,6 +29,10 @@
   line-height: 80rpx;
   color: #ffffff;
   font-weight: 600;
+  background: none;
+}
+.scancode::after {
+  border: none;
 }
 .subtitle {
   font-size: 28rpx;

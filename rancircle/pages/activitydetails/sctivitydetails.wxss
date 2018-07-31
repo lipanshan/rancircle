@@ -1,35 +1,44 @@
 /* pages/activitydetails/sctivitydetails.wxss */
 @import '../../common/font/font.wxss';
+
 .content {
   position: absolute;
-  top: 0; 
+  top: 0;
   right: 0;
   bottom: 98rpx;
   left: 0;
   background-color: #2a292f;
   overflow: hidden;
 }
+
 .header-img {
   height: 262rpx;
   overflow: hidden;
 }
+
 .header-img > image {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 .img-txt {
   padding: 3rpx 30rpx 0;
   font-size: 24rpx;
   line-height: 64rpx;
   color: #fff;
 }
+
 .hot {
-  color: #db5f69
+  color: #db5f69;
 }
+
 .task-wrap {
   margin: 20rpx 30rpx 0;
   background-color: #343339;
+}
+.task-swiper {
+  height: 362rpx;
 }
 .task-progress {
   padding: 0 20rpx;
@@ -38,16 +47,19 @@
   text-align: right;
   color: rgba(255, 255, 255, 0.6);
 }
+
 .title {
   padding: 8rpx 22rpx 0;
   font-size: 30rpx;
   line-height: 50rpx;
   color: #fff;
 }
+
 .h1 {
   padding: 0 24rpx;
   font-size: 0;
 }
+
 .h1-txt {
   display: inline-block;
   vertical-align: bottom;
@@ -55,6 +67,7 @@
   line-height: 120rpx;
   color: #d34d4e;
 }
+
 .km {
   display: inline-block;
   vertical-align: bottom;
@@ -62,22 +75,22 @@
   line-height: 56rpx;
   color: #7b7b7b;
 }
+
 .task-title {
   padding: 0 24rpx;
   font-size: 24rpx;
   line-height: 56rpx;
   color: #9a999f;
 }
+
 .task-intro {
   padding: 0 24rpx;
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
-.address,
-.use-time,
-.address-line,
-.mileage {
+
+.address, .use-time, .address-line, .mileage {
   -webkit-flex: 1;
   flex: 1;
   font-size: 24rpx;
@@ -85,38 +98,44 @@
   color: rgba(255, 255, 255, 0.4);
   padding-bottom: 21rpx;
 }
-.address> text ,
-.use-time> text ,
-.address-line> text ,
-.mileage > text {
+
+.address> text, .use-time> text, .address-line> text, .mileage > text {
   margin-right: 12rpx;
 }
+
 .active-btn-wrap {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  background:-webkit-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
-  background:-moz-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
-  background:-ms-repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
-  background:repeating-linear-gradient(to left,#db5f69 0%, #e7845b 100%);
+  background: -webkit-repeating-linear-gradient(to left, #db5f69 0%, #e7845b 100%);
+  background: -moz-repeating-linear-gradient(to left, #db5f69 0%, #e7845b 100%);
+  background: -ms-repeating-linear-gradient(to left, #db5f69 0%, #e7845b 100%);
+  background: repeating-linear-gradient(to left, #db5f69 0%, #e7845b 100%);
 }
+
 .active-btn {
+  line-height: 98rpx;
   background: none;
   color: #fff;
 }
+
 .active-btn::after {
-  border-color: transparent;
+  border: none;
 }
+
 .rule-wrap {
-  padding: 6rpx 30rpx 0;
+  margin-top: 40rpx;
+  padding: 6rpx 30rpx 28rpx;
   background-color: #343339;
 }
+
 .rule-header {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
 }
+
 .rule-title {
   display: block;
   -webkit-flex: 1;
@@ -125,9 +144,96 @@
   line-height: 70rpx;
   color: #fff;
 }
+
 .collapse-icon {
   display: block;
   font-size: 28rpx;
   line-height: 58rpx;
   color: rgba(255, 255, 255, 0.4);
+}
+
+.rule-content {
+  overflow: hidden;
+}
+
+.rule-txt {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.collapse {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.finish-fighting-wrap {
+  margin-top: 30rpx;
+  margin-bottom: 70rpx;
+  padding: 0 24rpx;
+  display: -webkit-flex;
+  display: flex;
+  background-color: #343339;
+}
+
+.fighting-people {
+  -webkit-flex: 1;
+  flex: 1;
+  overflow: hidden;
+  margin: 24rpx 24rpx 24rpx 0;
+  white-space: nowrap;
+}
+
+.fighting-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 24rpx;
+  width: 48rpx;
+  padding-bottom: 48rpx;
+  background-color: #2a292f;
+  border-radius: 50%;
+}
+
+.fighting-item > image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.more-wrap {
+  flex: 0 0 48rpx;
+  width: 48rpx;
+  margin: 22rpx 0;
+  background-color: #3f3e44;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 48rpx;
+  line-height: 48rpx;
+  color: #fff;
+}
+
+.fighting-num {
+  flex: 0 0 192rpx;
+  width: 192rpx;
+  padding: 20rpx 0;
+  font-size: 22rpx;
+  line-height: 26rpx;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.fighting-num > text {
+  display: block;
+  text-align: right;
+}
+
+.task-swiper {
+  overflow: hidden;
 }

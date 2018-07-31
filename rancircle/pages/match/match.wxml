@@ -1,0 +1,15 @@
+<!--pages/fighting/fighting.wxml-->
+<scroll-view scroll-y class="list">
+  <block wx:for="{{list}}" wx:key="id">
+    <view bindtap="navigateToDetail" data-info="{{item}}" class="section">
+      <view class="image-wrap">
+        <image src="{{item.img}}"></image>
+      </view>
+      <view class="h1">火热进行中剩余{{item.time}}天</view>
+      <view class="title">
+        <text class="subtitle">距离活动结束还有:{{item.title}}</text>
+        <text class="num">热度:{{item.num}}</text>
+      </view>
+    </view>
+  </block>
+</scroll-view>

@@ -2,7 +2,8 @@
 <view class="header">
   <view class="search-wrap">
     <text class="find">活动</text>
-    <text bindtap="scanCode" class="icon-scancode scancode"></text>
+    <!-- <button open-type="openSetting" bindopensetting="openSetting" class="scancode"><text  class="icon-scancode" ></text></button> -->
+     <button open-type="{{isOpenSetting}}" bindtap="scanCode" bindopensetting="openSetting" class="scancode"><text  class="icon-scancode" ></text></button>
   </view>
   <view class="subtitle">
     <text>跑步玩法任你挑选</text>
@@ -16,18 +17,18 @@
         <text>挑战</text>
       </view>
     </navigator>
-    <view class="menu-item">
+    <navigator url="../match/match" hover-class="none" open-type="navigate" class="menu-item">
       <text class="icon icon-trophy"></text>
-      <navigator class="p">
+      <view class="p">
         <text>赛事</text>
-      </navigator>
-    </view>
-    <view class="menu-item">
+      </view>
+    </navigator>
+    <navigator url="../train/train" class="menu-item">
       <text class="icon icon-plain"></text>
-      <navigator class="p">
+      <view class="p">
         <text>训练</text>
-      </navigator>
-    </view>
+      </view>
+    </navigator>
     <view class="menu-item">
       <text class="icon icon-run"></text>
       <navigator class="p">

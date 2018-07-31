@@ -5,34 +5,60 @@
   </view>
   <view class="img-txt">
     <text class="hot">{{info.hot}}</text>剩余{{info.time}}天</view>
-  <view class="task-wrap">
-    <view class="task-progress">任务1/1</view>
-    <view class="title">
-      里程累计
+  <swiper class="task-swiper">
+    <block wx:for="{{taskArr}}" wx:key="index">
+      <swiper-item class="task-item">
+        <view class="task-wrap">
+          <view class="task-progress">任务{{item.taskProgress}}/{{item.taskNum}}</view>
+          <view class="title">
+            里程累计
+          </view>
+          <view class="h1">
+            <text class="h1-txt">{{item.len}}</text>
+            <text class="km">KM</text>
+          </view>
+          <view class="task-title">任务要求</view>
+          <view class="task-intro">
+            <view class="mileage">
+              <text class="icon-mileage"></text>{{item.task1}}
+            </view>
+            <view class="address-line">
+              <text class="icon-address-line"></text>{{item.lenLine}}
+            </view>
+            <view class="use-time">
+              <text class="icon-meditor-time"></text>{{item.time}}
+            </view>
+            <view class="address">
+              <text class="icon-address"></text>{{item.address}}
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="rule-wrap">
+    <view class="rule-header">
+      <text class="rule-title">规则</text>
+      <text class="collapse-icon icon-arrow-down" bindtap="toggleCollapse"></text>
     </view>
-    <view class="h1">
-      <text class="h1-txt">77.70</text><text class="km">KM</text>
-    </view>
-    <view class="task-title">任务要求</view>
-    <view class="task-intro">
-      <view class="mileage">
-        <text class="icon-mileage"></text>--
-      </view>
-      <view class="address-line">
-        <text class="icon-address-line"></text>--
-      </view>
-      <view class="use-time">
-        <text class="icon-meditor-time"></text>--
-      </view>
-      <view class="address">
-        <text class="icon-address"></text>--
-      </view>
+    <view class="rule-content">
+      <view class="rule-txt {{isCollapse}}">夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西 瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚</view>
     </view>
   </view>
-  <view class="rule-wrap">
-    <view class="rule-header"><text class="rule-title">规则</text><text class="collapse-icon"></text></view>
-    <view class="rule-content">
-      <text class="rule-txt">夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚夏天跑步可以流汗更畅快,跑后一块西瓜,幸福感爆棚</text>
+  <view class="finish-fighting-wrap">
+    <view class="fighting-people">
+      <block wx:for="{{fightings}}" wx:key="index">
+        <view class="fighting-item">
+          <image src="{{item.url}}"></image>
+        </view>
+      </block>
+    </view>
+    <view class="more-wrap">
+      <text class="icon-more-point"></text>
+    </view>
+    <view class="fighting-num">
+      <text>2523432人</text>
+      <text>已经完成</text>
     </view>
   </view>
 </scroll-view>

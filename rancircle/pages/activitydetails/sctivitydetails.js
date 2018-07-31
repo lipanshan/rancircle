@@ -5,7 +5,63 @@ Page({
    * 页面的初始数据
    */
   data: {
-    info: ''
+    info: '',
+    isCollapse: 'collapse',
+    fightings: [
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      },
+      {
+        url: '../../image/avatar.jpg'
+      }
+    ],
+    taskArr: [
+      {
+        taskProgress: 2,
+        taskNum: 4,
+        len: 77.70,
+        task1: '尖峰时刻的',
+        lenLine: '',
+        time: '30',
+        address: '北京市中关村'
+      },
+      {
+        taskProgress: 2,
+        taskNum: 4,
+        len: 77.70,
+        task1: '尖峰时刻的',
+        lenLine: '',
+        time: '30',
+        address: '北京市中关村'
+      },
+      {
+        taskProgress: 2,
+        taskNum: 4,
+        len: 77.70,
+        task1: '尖峰时刻的',
+        lenLine: '',
+        time: '30',
+        address: '北京市中关村'
+      }
+    ]
   },
 
   /**
@@ -65,5 +121,10 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  toggleCollapse () {
+    this.setData({
+      isCollapse: this.data.isCollapse ? '' : 'collapse'
+    })
   }
 })

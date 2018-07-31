@@ -12,7 +12,10 @@
     "pages/topicdetail/topicdetail",
     "pages/personalinfo/personalinfo",
     "pages/fighting/fighting",
-    "pages/activitydetails/sctivitydetails"
+    "pages/activitydetails/sctivitydetails",
+    "pages/match/match",
+    "pages/train/train",
+    "pages/trainstep/trainstep"
   ],
   "window": {
     "backgroundTextStyle": "light",
