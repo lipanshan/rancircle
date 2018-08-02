@@ -1,0 +1,34 @@
+<!--component/select2/select2.wxml-->
+ <view class="select-wrap">
+      <view class="h1">{{title}}</view>
+      <view class="num">
+        <text class="h2">{{currentIndex}}</text>
+        <text class="unit">{{unit}}</text>
+      </view>
+      <view class="select-box">
+      <view class="mask-left"></view>
+        <scroll-view 
+          bindscroll="scrollOption" 
+          scroll-left="{{scrollLeft}}" 
+          scroll-x class="select">
+          <view class="block">
+            <view class="step"></view>
+            <view class="step"></view>
+          </view>
+          <block wx:for="{{optionSize}}" wx:key="item">
+            <view class="option ">
+              <view class="step-center {{index === currentIndex}}"></view>
+              <view class="step"></view>
+              <view class="step"></view>
+              <view class="step"></view>
+              <view class="step"></view>
+            </view>
+          </block>
+          <view class="block">
+            <view class="step"></view>
+            <view class="step"></view>
+          </view>
+        </scroll-view>
+        <view class="mask-right"></view>
+      </view>
+    </view>

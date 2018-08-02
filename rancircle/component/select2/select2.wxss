@@ -1,0 +1,123 @@
+/* component/select2/select2.wxss */
+.h1 {
+  font-size: 32rpx;
+  line-height: 72rpx;
+  color: #fff;
+  text-align: center;
+}
+.num {
+  padding-top: 6rpx;
+  font-size: 0;
+  text-align: center;
+}
+.h2 {
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 58rpx;
+  line-height: 90rpx;
+  font-weight: bold;
+  color: #fff;
+}
+.unit {
+  padding-left: 14rpx;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: 22rpx;
+  line-height: 54rpx;
+  color: rgba(255, 255, 255, 0.6);
+}
+.select-box {
+  position: relative;
+  margin: 0 auto;
+  width: 440rpx;
+  height: 44rpx;
+  background: -webkit-repeating-linear-gradient(90deg, rgba(42, 41, 47, 1), rgba(42, 41, 47, 0.1) 30%, rgba(42, 41, 47, 0.1) 70%,rgba(42, 41, 47, 1) 100%);
+  border-radius: 44rpx;
+}
+.mask-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 74rpx;
+  height: 100%;
+  opacity: 0.4;
+  filter: alpha(opacity = 40);
+  background-color: #2a292f;
+  z-index: 1000;
+}
+.mask-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 74rpx;
+  height: 100%;
+  opacity: 0.4;
+  filter: alpha(opacity = 40);
+  background-color: #2a292f;
+  z-index: 1000;
+}
+.select {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.select-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rpx; 
+  height: 100%;
+  background-color: rgba(255,255, 255, 1);
+  z-index: 1000;
+}
+.block {
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;  
+  display: inline-block;
+  vertical-align: top;
+  width: 220rpx;
+  font-size: 0;
+}
+.block:nth-child(1) {
+  text-align: right;
+}
+.option {
+  padding-top: 8rpx;
+  padding-bottom: 8rpx;
+  display: inline-block;
+  vertical-align: top;
+}
+.step {
+  margin-right: 8rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rpx;
+  background-color: rgba(255,255, 255, 1);
+  height: 6rpx;
+}
+.step-center {
+  margin-right: 8rpx;
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rpx;
+  background-color: rgba(255,255, 255, 1);
+  height: 28rpx;
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visiblity: hidden;
+  -moz-backface-visiblity: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+
+}
+.step-center.true {
+  background-color: rgba(255, 255, 255, 0);
+}
+.block > .step {
+  margin-top: 11rpx;
+  margin-bottom: 11rpx;
+}

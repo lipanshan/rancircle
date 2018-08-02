@@ -1,27 +1,38 @@
 <!--pages/trainstep/trainstep.wxml-->
 <view class="content">
-  <view class="section">
-      <view class="title">
-        <text class="p">我们会根据你的BMI指数</text>
-        <text class="p">为你提供合适的训练计划方案</text>
+  <view class="section {{hide}}">
+    <view class="title">
+      <text class="p">我们会根据你的BMI指数</text>
+      <text class="p">为你提供合适的训练计划方案</text>
+    </view>
+    <view class="select-wrap">
+      <my-select bindchange="selectHeight" optionSize="{{options}}" currentIndex="{{height}}" title="身高" unit="CM"></my-select>
+    </view>
+    <view class="select-wrap">
+      <my-select bindchange="selectWeight" optionSize="{{options}}" currentIndex="{{weight}}" title="体重" unit="KM"></my-select>
+    </view>
+  </view>
+  <view class="section {{hide}}">
+    <view class="test-top">
+      <view class="test-time">
+        <view class="test-title">请选择4个训练日</view>
+        <view class="test-subtitle">(为保证科学训练,训练日不可连续)</view>
       </view>
-      <view class="select-wrap">
-        <view class="h1">身高</view>
-        <view class="num"><text class="h2">165</text><text class="unit">CM</text></view>
-        <scroll-view bindscroll="scrollOption" scroll-left="{{scrollLeft}}" scroll-x class="select">
-        <block  wx:for="{{options}}" wx:key="item">
-          <view class="option">
-            <view class="step"></view>
-            <view class="step"></view>
-            <view class="step-center {{item === currentOption}}"></view>
-            <view class="step"></view>
-            <view class="step"></view>
-          </view>
+      <view class="week-wrap">
+        <block wx:for="{{week}}" wx:key="item">
+          <view bindtap="selectWeekItem" data-current="{{index}}" class="week-item {{item.active}}">{{item.txt}}</view>
         </block>
-        </scroll-view>
       </view>
+    </view>
+    <view class="test-bottom">
+      <picker start="00:00" end="23:59" bindchange="bindPickerChange" mode="time">
+        <view class="picker">
+          {{timeTxt}}
+        </view>
+      </picker>
+    </view>
   </view>
 </view>
-<view class="next-btn">
-<text>下一步</text>
+<view class="next-btn" bindtap="nextPage">
+  <text>下一步</text>
 </view>
