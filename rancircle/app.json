@@ -15,7 +15,8 @@
     "pages/activitydetails/sctivitydetails",
     "pages/match/match",
     "pages/train/train",
-    "pages/trainstep/trainstep"
+    "pages/trainstep/trainstep",
+    "pages/trainstepdetail/trainstepdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

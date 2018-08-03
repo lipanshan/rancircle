@@ -1,0 +1,53 @@
+<!--pages/trainstepdetail/trainstepdetail.wxml-->
+<scroll-view scroll-y bindscroll="scroll" class="list-wrap">
+  <view class="top-info">
+    <view class="image-wrap">
+      <image class="bg-image" src="../../image/banner.png"></image>
+    </view>
+    <view class="title-wrap">
+      <view class="title-item1">
+        <text class="h1">减肥燃脂训练计划-初级</text>
+        <view class="subtitle">
+          <text class="data-icon icon-date"></text>
+          <text class="subtitle">2018.07.31 - 2018.09.04</text>
+        </view>
+      </view>
+      <view class="title-item2">
+        <view class="time">
+          <text class="num">36</text>天</view>
+        <text class="all-time">总天数</text>
+      </view>
+      <view class="title-item3">
+        <view class="time">
+          <text class="num">35</text>KM</view>
+        <text class="all-time">总里程</text>
+      </view>
+    </view>
+    <view class="intro">
+      <text class="p">减肥燃脂初级训练方案由CrosssFit Rouse 提供，针对体型偏胖者，在跑步训练的同时帮助跑者增加心肺功能，掌握正确的身体控制能力，最终达到减肥燃脂的有效目标。</text>
+    </view>
+  </view>
+  <view class="train-list">
+    <block wx:for="{{dataList}}" wx:key="time">
+      <view class="list-item">
+        <view class="list-title" data-txt="{{item.time}}">训练列表 - {{item.time}}</view>
+        <block wx:for="{{item.list}}" wx:key="index" wx:for-item="listItem">
+          <view class="list-item-txt">
+            <view class="item-data">
+              <text class="item-data-info">{{listItem.data}}</text>
+              <text class="item-data-week">{{listItem.week}}</text>
+            </view>
+            <view class="item-title">{{listItem.title}}</view>
+            <view class="item-icon">
+              <text class="icon-more"></text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </block>
+  </view>
+  <view class="list-title-fixed" hidden="{{fixedShow}}">训练列表-{{titleTxt}}</view>
+</scroll-view>
+<view class="bottom-btn">
+  <button class="next-btn">下一个</button>
+</view>

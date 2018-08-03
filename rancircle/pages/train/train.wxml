@@ -1,12 +1,21 @@
 <!--pages/train/train.wxml-->
 <scroll-view class="list" scroll-y>
   <block wx:for="{{list}}" wx:key="index">
-    <navigator open-type='navigate' hover-class="none" url="../trainstep/trainstep?id={{item.id}}" class="item">
+    <navigator wx:if="{{item.id === 0}}" open-type='navigate' hover-class="none" url="../trainstep/trainstep?id={{item.id}}" class="item">
       <view class="icon-wrap">
         <text class="icon-active"></text>
       </view>
       <view class="text">
-        <view class="title">{{item.title}}</view>
+        <view class="title">{{item.id}}{{item.title}}</view>
+        <view class="subtitle">{{item.subtitle}}</view>
+      </view>
+    </navigator>
+    <navigator wx:elif="{{item.id === 1}}" open-type='navigate' hover-class="none" url="../trainstepdetail/trainstepdetail?id={{item.id}}" class="item">
+      <view class="icon-wrap">
+        <text class="icon-active"></text>
+      </view>
+      <view class="text">
+        <view class="title">{{item.id}}{{item.title}}</view>
         <view class="subtitle">{{item.subtitle}}</view>
       </view>
     </navigator>
