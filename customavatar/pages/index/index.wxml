@@ -1,13 +1,52 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="people-wrap">
+    <view class="people-image">
+      <image src="{{currentPeople}}"></image>
+    </view>
+    <view class="bg-img-wrap">
+      <image src="{{currentBg}}"></image>
+    </view>
+    <view class="image-txt">
+      <image src="{{currentImageTxt}}"></image>
+    </view>
+    <movable-area class="image-icon1-wrap">
+      <block wx:for="{{currentImageIcon1}}" wx:key="item">
+        <movable-view direction="all" data-item="{{item}}" x="{{item.x}}" y="{{item.y}}" class="drop-wrap" bindchange="onChange">
+          <image src="{{item.url}}"></image>
+          <view class="move"><image src="https://puui.qpic.cn/vupload/0/20180725_scale.png/0"></image></view>
+          <view bindtap="removeIcon" data-url="{{item.url}}" class="x"><image src="https://puui.qpic.cn/vupload/0/20180725_x.png/0"></image></view>
+        </movable-view>
+      </block>
+    </movable-area>
+  </view>
+</view>
+<view class="btn-group">
+  <view class="menu-list">
+    <block wx:for="{{btnList}}" wx:key="url">
+      <view class="menu-item" data-item="{{item.txt}}" bindtap="selectMenu">
+        <image wx:if="{{menuActive !== item.txt}}" src="{{item.url}}" class="menu-item-icon"></image>
+        <image wx:else src="{{item.active}}" class="menu-item-icon"></image>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="content-list">
+    <scroll-view scroll-x class="menu-cnt">
+      <block wx:for="{{contentRow1}}" wx:key="url">
+        <view bindtap="selectItem" data-index="{{index}}" class="avatar-item {{txt}} row1">
+          <image class="avatar" src="{{item}}"></image>
+        </view>
+      </block>
+    </scroll-view>
+    <scroll-view scroll-x class="menu-cnt">
+      <block wx:for="{{contentRow2}}" wx:key="url">
+        <view bindtap="selectItem" data-index="{{contentRow1.length + index}}" class="avatar-item {{txt}} row2">
+          <image class="avatar" src="{{item}}"></image>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+  <view class="bg-image-wrap">
+    <image class="bg-image" src="https://puui.qpic.cn/vupload/0/20180726_menuBg.png/0"></image>
   </view>
 </view>
