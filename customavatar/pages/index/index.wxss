@@ -33,6 +33,16 @@
   width: 200rpx;
   height: 200rpx;
   z-index: 200;
+}
+.drop-wrap.false > .move,
+.drop-wrap.false > .x {
+  display: none;
+}
+.drop-wrap.true > .move,
+.drop-wrap.true > .x {
+  display: block;
+}
+.drop-wrap.true {
   border: 1rpx dotted #fff;
 }
 .drop-wrap > image {
@@ -194,7 +204,7 @@
 .row1.no-border,
 .row2.no-border,
 .avatar-item.no-border {
-  border: none;
+  border-color: transparent;
   background: none;
   width: auto;
 }
@@ -221,4 +231,17 @@
 .avatar-item > image {
   width: 86rpx;
   height: 86rpx;
+}
+.submit-wrap {
+  position: absolute;
+  top: -148rpx;
+  right: 0;
+  z-index: 240;
+  width: 148rpx;
+  height: 104rpx;
+}
+.submit-wrap > image {
+  display: block;
+  width: 148rpx;
+  height: 104rpx;
 }

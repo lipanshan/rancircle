@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
     motto: 'Hello World',
@@ -180,7 +179,9 @@ Page({
     currentImageTxt: null,
     currentImageIcon1: null,
     currentImageIcon2: null,
-    isAnimation: false
+    currentMove: '',
+    windowW: 0,
+    windowH: 0
   },
   //事件处理函数
   bindViewTap: function() {
@@ -214,7 +215,17 @@ Page({
           })
         }
       })
+     
     }
+    const that = this;
+    wx.getSystemInfo({
+      success(res) {
+        that.setData({
+          windowW: res.windowWidth,
+          windowH: res.windowHeight
+        })
+      }
+    })
     const centerNum = Math.floor(this.data.btnList[0].list.length / 2);
     this.setData({
       contentRow1: this.data.btnList[0].list.slice(0, centerNum),
@@ -256,11 +267,13 @@ Page({
         this._changeTxt(this.data.btnList[2].images[e.currentTarget.dataset.index])
         break;
       case 'icon1':
-        this._changeIcon1(this.data.btnList[3].images[e.currentTarget.dataset.index])
+        this._changeIcon(this.data.btnList[3].images[e.currentTarget.dataset.index])
         break;
       case 'icon2':
-        this._changeIcon2(this.data.btnList[4].images[e.currentTarget.dataset.index])
+        this._changeIcon(this.data.btnList[4].images[e.currentTarget.dataset.index])
         break;
+      default:
+      break;
     }
   },
   _changeAvatar(url) {
@@ -278,7 +291,7 @@ Page({
       currentImageTxt: url === this.data.currentImageTxt ? null : url
     })
   },
-  _changeIcon1(url) {
+  _changeIcon(url) {
     const flag = this.data.currentImageIcon1.find((item) => {
       return item.url === url
     })
@@ -291,11 +304,9 @@ Page({
       });
     }
     this.setData({
-      currentImageIcon1: arr
+      currentImageIcon1: arr,
+      currentMove: arr.length - 1
     })
-  },
-  _changeIcon2(url) {
-    console.log(url);
   },
   removeIcon (e) {
     const arr = JSON.parse(JSON.stringify(this.data.currentImageIcon1));
@@ -308,7 +319,6 @@ Page({
     })
   },
   onChange (e) {
-    console.log(e)
     const index = this.data.currentImageIcon1.findIndex((item) => {
       return e.currentTarget.dataset.item.url === item.url
     });
@@ -316,7 +326,41 @@ Page({
     const keyY = `currentImageIcon1[${index}].y`;
     this.setData({
       [keyX]: e.detail.x,
-      [keyY]: e.detail.y
+      [keyY]: e.detail.y,
+      currentMove: index
     })
+  },
+  onfocus (e) {
+    this.setData({
+      currentMove: e.currentTarget.dataset.inde
+    })
+  },
+  onblur (e) {
+    this.setData({
+      currentMove: null
+    })
+  },
+  onSubmit (e) {
+    this._canvasScreen(e);
+  },
+  _canvasScreen (e) {
+    const canvas = wx.createCanvasContext('myCanvas', this);
+    canvas.drawImage(this.data.currentBg, 0, 0, this.data.windowW, this.data.windowH)
+    wx.canvasToTempFilePath({
+      canvasId: 'myCanvas',
+      x: 0,
+      y: 0,
+      width: this.data.windowW,
+      height: this.data.windowH,
+      destWidth: this.data.windowW,
+      destHeight: this.data.windowH,
+      success (res) {
+        console.log(res.tempFilePath)
+        wx.previewImage({
+          current: res.tempFilePath,
+          urls: [res.tempFilePath]
+        })
+      }
+    },this)
   }
 })
