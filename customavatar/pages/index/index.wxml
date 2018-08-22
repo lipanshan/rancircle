@@ -1,5 +1,6 @@
 <!--index.wxml-->
-<view class="container">
+<view class="wrap">
+<view id="container" class="container {{canvasFlag}}">
   <view class="people-wrap">
     <view class="people-image">
       <image src="{{currentPeople}}"></image>
@@ -12,7 +13,7 @@
     </view>
     <movable-area class="image-icon1-wrap" bindtap="onblur">
       <block wx:for="{{currentImageIcon1}}" wx:key="url">
-        <movable-view direction="all" catchtap="onfocus" data-inde="{{index}}" data-item="{{item}}" x="{{item.x}}" y="{{item.y}}" class="drop-wrap {{currentMove === index}}" bindchange="onChange">
+        <movable-view direction="all" catchtap="onfocus" animation="false" data-inde="{{index}}" data-item="{{item}}" x="{{item.x}}" y="{{item.y}}" class="drop-wrap {{currentMove === index}}" bindchange="onChange">
           <image src="{{item.url}}"></image>
           <view class="move"><image src="https://puui.qpic.cn/vupload/0/20180725_scale.png/0"></image></view>
           <view bindtap="removeIcon" data-url="{{item.url}}" class="x"><image src="https://puui.qpic.cn/vupload/0/20180725_x.png/0"></image></view>
@@ -21,7 +22,7 @@
     </movable-area>
   </view>
 </view>
-<view class="btn-group">
+<view class="btn-group {{canvasFlag}}">
   <view class="menu-list">
     <block wx:for="{{btnList}}" wx:key="url">
       <view class="menu-item" data-item="{{item.txt}}" bindtap="selectMenu">
@@ -53,6 +54,7 @@
     <image src="https://puui.qpic.cn/vupload/0/20180726_submitBtn.png/0"></image>
   </view>
 </view>
-<view class="canvas-wrap">
-  <canvas canvas-id="myCanvas" style="width:{{windowW}}px;height: {{windowH}}px"></canvas>
+<view class="canvas-wrap {{canvasFlag}}" bindtap="hideCanvas" bindlongtap='saveCanvas'>
+  <canvas canvas-id="myCanvas" hidden="{{!canvasFlag}}" style="width:{{windowW}}px;height: {{windowH}}px"></canvas>
+</view>
 </view>

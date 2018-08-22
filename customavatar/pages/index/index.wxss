@@ -1,11 +1,26 @@
 /**index.wxss**/
-
+page {
+  overflow: hidden;
+}
+.wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
 .container {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 392rpx;
+}
+.btn-group.true,
+.container.true {
+  display: none
 }
 .people-wrap {
   position: absolute;
@@ -103,12 +118,12 @@
   bottom: -392rpx;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 1448rpx;
   z-index: -1;
 }
 .people-image > image {
-  width: 750rpx;
-  height: 750rpx;
+  width: 512rpx;
+  height: 490rpx;
   display: block;
 }
 .bg-img-wrap {
@@ -118,9 +133,6 @@
   bottom: 0;
   left: 0;
   z-index: -1;
-}
-.bg-img-wrap {
-  bottom: -392rpx;
 }
 .people-image {
   position: absolute;
@@ -181,7 +193,6 @@
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  height: 100%;
 }
 .menu-cnt {
   -webkit-flex: 1;
@@ -244,4 +255,18 @@
   display: block;
   width: 148rpx;
   height: 104rpx;
+}
+.canvas-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -3;
+  overflow: hidden
+}
+.canvas-wrap.true {
+  display: block;
+  z-index: 200;
 }
