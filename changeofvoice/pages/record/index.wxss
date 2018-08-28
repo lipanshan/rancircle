@@ -1,0 +1,288 @@
+/**index.wxss**/
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.bg-wrap {
+  position: relative;
+  height: 100%;
+  min-height: 1280rpx;
+}
+.top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 570rpx;
+}
+.center {
+  position: absolute;
+  top: 570rpx;
+  right: 0;
+  bottom: 220rpx;
+  left: 0;
+}
+.bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 220rpx;
+}
+.voice-wrap {
+  position: absolute;
+  left: 50%;
+  top: 330rpx;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 460rpx;
+  height: 85rpx;
+}
+.voice-time {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  padding-left: 160rpx;
+  padding-right: 20rpx;
+  text-align: right;
+  font-size: 28rpx;
+  line-height: 85rpx;
+  z-index: 10;
+}
+.voice-time.true {
+  line-height: 95rpx;
+}
+.btn-group {
+  padding-left: 88rpx;
+  padding-right: 70rpx;
+  height: 100%;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.auto-message {
+  height: 100rpx;
+}
+.btns-wrap {
+  position: relative;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 318rpx;
+  justify-content: space-between;
+}
+.auto-message-left {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 20rpx;
+  font-size: 0;
+  overflow: hidden;
+}
+.auto-message-right {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  padding-left: 20rpx;
+  overflow: hidden;
+}
+.message {
+  padding-top: 5rpx;
+  padding-bottom: 35rpx;
+  white-space: wrap;
+  color: #333;
+  height: 65rpx;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.message-txt {
+  flex: 1;
+  display: block;
+  font-size: 24rpx;
+  line-height: 30rpx;
+}
+.play-voice-btn {
+  position: relative;
+  flex: 0 0 312rpx;
+  width: 312rpx;
+  height: 313rpx;
+}
+.play-down-btn,
+.play-up-btn {
+  width: 100%;
+  height: 100%;
+}
+.btns {
+  flex: 0 0 160rpx;
+  width: 160rpx;
+  text-align: right;
+  font-size: 0;
+}
+.btn-l,
+.btn-f,
+.btn-y {
+  display: inline-block;
+  vertical-align: top;
+  width: 140rpx;
+  height: 44rpx;
+  margin-top: 30rpx;
+}
+.btn-send {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 30rpx;
+  width: 158rpx;
+  height: 78rpx;
+}
+.cloud {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 75rpx;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+}
+@keyframes cloudMove {
+  0% {
+     -webkit-transform: translate3d(-150rpx, 0, 0);
+    -moz-transform: translate3d(-150rpx, 0, 0);
+    -ms-transform: translate3d(-150rpx, 0, 0);
+    -o-transform: translate3d(-150rpx, 0, 0);
+    transform: translate3d(-150rpx, 0, 0);
+  }
+  75% {
+     -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.cloud:nth-child(1) {
+  top: 40rpx;
+   -webkit-animation: cloudMove 12s linear infinite;
+  -moz-animation: cloudMove 12s linear infinite;
+  -ms-animation: cloudMove 12s linear infinite;
+  -o-animation: cloudMove 12s linear infinite;
+  animation: cloudMove 12s linear infinite;
+}
+.cloud:nth-child(8) {
+  top: 0;
+   -webkit-animation: cloudMove 15s linear infinite;
+  -moz-animation: cloudMove 15s linear infinite;
+  -ms-animation: cloudMove 15s linear infinite;
+  -o-animation: cloudMove 15s linear infinite;
+  animation: cloudMove 15s linear infinite;
+}
+.cloud:nth-child(2) {
+  top: 190rpx;
+  -webkit-animation: cloudMove 15s linear infinite;
+  -moz-animation: cloudMove 15s linear infinite;
+  -ms-animation: cloudMove 15s linear infinite;
+  -o-animation: cloudMove 15s linear infinite;
+  animation: cloudMove 15s linear infinite;
+}
+.cloud:nth-child(5) {
+  top: 220rpx;
+   -webkit-animation: cloudMove 12s linear infinite;
+  -moz-animation: cloudMove 12s linear infinite;
+  -ms-animation: cloudMove 12s linear infinite;
+  -o-animation: cloudMove 12s linear infinite;
+  animation: cloudMove 12s linear infinite;
+}
+.cloud:nth-child(3) {
+  top: auto;
+  bottom: 0rpx;
+  -webkit-animation: cloudMove 10s linear infinite;
+  -moz-animation: cloudMove 10s linear infinite;
+  -ms-animation: cloudMove 10s linear infinite;
+  -o-animation: cloudMove 10s linear infinite;
+  animation: cloudMove 10s linear infinite;
+}
+.cloud:nth-child(7) {
+  top: auto;
+  bottom: 50rpx;
+   -webkit-animation: cloudMove 14s linear infinite;
+  -moz-animation: cloudMove 14s linear infinite;
+  -ms-animation: cloudMove 14s linear infinite;
+  -o-animation: cloudMove 14s linear infinite;
+  animation: cloudMove 14s linear infinite;
+}
+.cloud:nth-child(4) {
+  top: 420rpx;
+   -webkit-animation: cloudMove 20s linear infinite;
+  -moz-animation: cloudMove 20s linear infinite;
+  -ms-animation: cloudMove 20s linear infinite;
+  -o-animation: cloudMove 20s linear infinite;
+  animation: cloudMove 20s linear infinite;
+}
+.cloud:nth-child(6) {
+  top: 500rpx;
+   -webkit-animation: cloudMove 16s linear infinite;
+  -moz-animation: cloudMove 16s linear infinite;
+  -ms-animation: cloudMove 16s linear infinite;
+  -o-animation: cloudMove 16s linear infinite;
+  animation: cloudMove 16s linear infinite;
+}
+.play-voice-btn {
+  position: relative;
+}
+.play-voice-authorize {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  font-size: 0;
+  background: none;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.play-voice-authorize:after {
+  border-color: transparent;
+}
+.btn-send-bg,
+.btn-send-active,
+.voice-wrap-bg,
+.voice-wrap-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
