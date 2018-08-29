@@ -4,20 +4,10 @@ const app = getApp()
 let timer = null;
 Page({
   data: {
-    motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    canIUseOpenSetting: wx.canIUse('button.open-type.openSetting'),
-    playBtnDown: true,
-    txt_arr: ['全世界，你最可爱，没有之一。', '保持好奇心，保持童真；保持反抗，保持爱。', '喜欢的人是海面的灯塔。遥远，不可触，但是把我从黑夜里打捞出来了。', '你就是最好的人，如果我发现有谁比你好，我会装作没看见。', '谁结婚谁分手我一点也不在乎，我只想知道尔晴什么时候死。', '一个不负责任的文案建议：今日目标 好好做人', '想为爱做很多事情，可惜没有人爱我。', '感到悲伤的时候，去看大海。一个人寂寞的时候，去看大海。'],
-    messageTxt: '',
-    voiceTime: 0,
-    openSettingType: false,
-    canIUseVoice: wx.canIUse('getRecorderManager'),
-    record: null,
-    isStartRecord: false,
-    recordPath: null
+    avatarUrl: ''
   },
   //事件处理函数
   onLoad: function() {
@@ -49,6 +39,7 @@ Page({
     }
   },
   onShow: function() {
+    
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
@@ -61,7 +52,6 @@ Page({
     if (e.detail.userInfo) {
       wx.navigateTo({
         url: '../record/index',
-
       })
     }
   }

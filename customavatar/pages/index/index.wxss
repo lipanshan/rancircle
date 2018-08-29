@@ -256,6 +256,16 @@ page {
   width: 148rpx;
   height: 104rpx;
 }
+.open-setting-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
 .canvas-wrap {
   display: none;
   position: absolute;
@@ -269,4 +279,50 @@ page {
 .canvas-wrap.true {
   display: block;
   z-index: 200;
+}
+.audio-icon {
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  width: 44rpx;
+  height: 44rpx;
+  z-index: 900;
+  padding: 20rpx;
+  transform-origin: center center;
+}
+@keyframes rotateIcon {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.audio-icon > image {
+  display: block;
+  width: 44rpx;
+  height: 44rpx;
+  
+}
+.false.audio-icon > image {
+  -webkit-animation: rotateIcon 2s linear infinite;
+  -moz-animation: rotateIcon 2s linear infinite;
+  -ms-animation: rotateIcon 2s linear infinite;
+  -o-animation: rotateIcon 2s linear infinite;
+  animation: rotateIcon 2s linear infinite;
+}
+.true.audio-icon > image {
+  /* -webkit-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused; */
 }

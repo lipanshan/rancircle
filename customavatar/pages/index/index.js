@@ -1,13 +1,13 @@
 //index.js
 //获取应用实例
 const canvas = wx.createCanvasContext('myCanvas', this);
-const app = getApp()
+const app = getApp();
 Page({
   data: {
-    motto: 'Hello World',
+    isOpenSetting: false,
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    canIUse: wx.canIUse('saveImageToPhotosAlbum'),
     btnList: [{
         url: 'https://puui.qpic.cn/vupload/0/20180726_menuTypeStar.png/0',
         txt: 'avatar',
@@ -183,7 +183,7 @@ Page({
     windowW: 0,
     windowH: 0,
     bottonBoxW: 0,
-    bottonBoxH: 0, 
+    bottonBoxH: 0,
     canvasImage: '',
     canvasUrls: {
       currentPeople: null,
@@ -191,7 +191,12 @@ Page({
       currentImageTxt: null,
       currentImageIcon1: null
     },
-    canvasFlag: false
+    canvasFlag: false,
+    canIUseAudio: wx.canIUse('createInnerAudioContext'),
+    isPause: false,
+    isPauseFlag: false,
+    oncePlay: true,
+    rotateDeg: ''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -200,33 +205,34 @@ Page({
     })
   },
   onLoad: function() {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
+    const THAT = this;
+    wx.getSetting({
+      success(res) {
+        if (res.authSetting['scope.writePhotosAlbum'] === undefined) {
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success(res) {
+              that.setData({
+                isOpenSetting: true
+              });
+            },
+            fail(msg) {
+              that.setData({
+                isOpenSetting: false
+              });
+            }
           })
+        } else if (res.authSetting['scope.writePhotosAlbum'] === false) {
+          that.setData({
+            isOpenSetting: false
+          });
+        } else if (res.authSetting['scope.writePhotosAlbum'] === true) {
+          that.setData({
+            isOpenSetting: true
+          });
         }
-      })
-     
-    }
+      }
+    });
     const that = this;
     wx.getSystemInfo({
       success(res) {
@@ -254,12 +260,30 @@ Page({
     });
     wx.getImageInfo({
       src: this.data.btnList[0].images[0],
-      success (res) {
+      success(res) {
         that.setData({
-          [keyUrlPeople] : res.path 
+          [keyUrlPeople]: res.path
         });
       }
-    })
+    });
+    if (this.data.canIUseAudio) {
+      this.bgAudio = wx.createInnerAudioContext();
+      this.bgAudio.src = "https://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/bg.mp3";
+      this.bgAudio.autoPlay = true;
+      this.bgAudio.play();
+      this.bgAudio.onPlay(() => {
+        this._getRotateDeg(true);
+      });
+      this.bgAudio.onPause(() => {
+        this._getRotateDeg(false);
+      });
+      this.bgAudio.onStop(() => {
+        this._getRotateDeg(false);
+      });
+    } else {
+      this.bgAudio = wx.createAudioContext('bgAudio', this);
+      this.bgAudio.play();
+    }
   },
   getUserInfo: function(e) {
     app.globalData.userInfo = e.detail.userInfo
@@ -300,7 +324,7 @@ Page({
         this._changeIcon(this.data.btnList[4].images[e.currentTarget.dataset.index])
         break;
       default:
-      break;
+        break;
     }
   },
   _changeAvatar(url) {
@@ -311,7 +335,7 @@ Page({
     });
     wx.getImageInfo({
       src: url,
-      success (res) {
+      success(res) {
         that.setData({
           [key]: res.path
         });
@@ -375,7 +399,7 @@ Page({
       });
       wx.getImageInfo({
         src: url,
-        success (res) {
+        success(res) {
           arrUrl.push({
             url: res.path,
             x: 0,
@@ -388,7 +412,7 @@ Page({
       })
     }
   },
-  removeIcon (e) {
+  removeIcon(e) {
     const arr = JSON.parse(JSON.stringify(this.data.currentImageIcon1));
     const urlArr = JSON.parse(JSON.stringify(this.data.canvasUrls.currentImageIcon1));
     const key = 'canvasUrls.currentImageIcon1';
@@ -404,7 +428,7 @@ Page({
     });
     this._canvasImageIcon();
   },
-  onChange (e) {
+  onChange(e) {
     const index = this.data.currentImageIcon1.findIndex((item) => {
       return e.currentTarget.dataset.item.url === item.url
     });
@@ -420,51 +444,54 @@ Page({
       currentMove: index
     })
   },
-  onfocus (e) {
+  onfocus(e) {
     this.setData({
       currentMove: e.currentTarget.dataset.inde
     })
   },
-  onblur (e) {
+  onblur(e) {
     this.setData({
       currentMove: null
     })
   },
-  onSubmit (e) {
+  onSubmit(e) {
+    if (!this.data.isOpenSetting) {
+      return false;
+    }
     const that = this;
     this._canvasBg();
     this._canvasPeople();
     this._canvasImageTxt();
     this._canvasImageIcon();
-    canvas.draw(false, function (res) {
+    canvas.draw(false, function(res) {
       console.log(res)
     });
     this.setData({
       canvasFlag: true
     })
   },
-  _canvasBg () {
+  _canvasBg() {
     const that = this;
     if (this.data.canvasUrls.currentBg !== null) {
       canvas.drawImage(this.data.canvasUrls.currentBg, 0, 0, that.data.windowW, that.data.windowH);
-  
+
     }
   },
-  _canvasPeople () {
+  _canvasPeople() {
     const that = this;
     if (this.data.canvasUrls.currentPeople !== null) {
       canvas.drawImage(this.data.canvasUrls.currentPeople, ((that.data.windowW - 256) / 2), (that.data.windowH - 245), 256, 245);
-    
+
     }
   },
-  _canvasImageTxt (){
+  _canvasImageTxt() {
     const that = this;
     if (this.data.canvasUrls.currentImageTxt !== null) {
-      
+
       canvas.drawImage(this.data.canvasUrls.currentImageTxt, 0, 0, that.data.windowW, that.data.windowH);
     }
   },
-  _canvasImageIcon (){
+  _canvasImageIcon() {
     const that = this;
     if (this.data.canvasUrls.currentImageIcon1.length) {
       for (let i = 0, len = this.data.canvasUrls.currentImageIcon1.length; i < len; i++) {
@@ -475,18 +502,18 @@ Page({
       }
     }
   },
-  hideCanvas (e) {
+  hideCanvas(e) {
     this.setData({
       canvasFlag: false
     });
   },
-  saveCanvas (e) {
+  saveCanvas(e) {
     wx.canvasToTempFilePath({
       canvasId: 'myCanvas',
-      success (res) {
+      success(res) {
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
-          success (res) {
+          success(res) {
             wx.showToast({
               title: '图片以保存',
               icon: 'success',
@@ -496,5 +523,73 @@ Page({
         })
       }
     }, this)
+  },
+  onOpenSetting(e) {
+    if (e.detail.authSetting['scope.writePhotosAlbum']) {
+      this.setData({
+        isOpenSetting: true
+      });
+    } else {
+      this.setData({
+        isOpenSetting: false
+      });
+    }
+  },
+  toggleAudio(e) {
+    if (this.data.canIUseAudio && this.bgAudio.paused) {
+      this.bgAudio.play();
+    } else if (this.data.canIUseAudio && !this.bgAudio.paused) {
+      this.bgAudio.pause();
+    } else if (!this.data.canIUseAudio) {
+      if (this.data.isPauseFlag) {
+        this.bgAudio.play();
+      } else {
+        this.bgAudio.pause();
+      }
+    }
+  },
+  bgAudioPause(e) {
+    this.setData({
+      isPauseFlag: true
+    })
+    this._getRotateDeg(false);
+  },
+  bgStop(e) {
+    this.setData({
+      isPauseFlag: true
+    })
+    this._getRotateDeg(false);
+  },
+  bgAudioPlay(e) {
+    this.setData({
+      isPauseFlag: false
+    });
+    this._getRotateDeg(true);
+  },
+  autoPlayVideo(e) {
+    if (this.data.oncePlay) {
+      this.setData({
+        oncePlay: false
+      })
+      this.bgAudio.play();
+    }
+  },
+  _getRotateDeg(flag) {
+    const query = wx.createSelectorQuery();
+    const that = this;
+    query.select('.audio-image-hook').fields({
+      'computedStyle': ['transform']
+    }, function (res) {
+      if (!flag) {
+        that.setData({
+          rotateDeg: res.transform === 'none' ? that.data.rotateDeg : that.data.rotateDeg + ''+ res.transform,
+          isPause: true
+        })
+      } else {
+        that.setData({
+          isPause: false
+        })
+      }
+    }).exec();
   }
 })

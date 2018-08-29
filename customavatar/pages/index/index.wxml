@@ -1,60 +1,69 @@
 <!--index.wxml-->
-<view class="wrap">
-<view id="container" class="container {{canvasFlag}}">
-  <view class="people-wrap">
-    <view class="people-image">
-      <image src="{{currentPeople}}"></image>
-    </view>
-    <view class="bg-img-wrap">
-      <image src="{{currentBg}}"></image>
-    </view>
-    <view class="image-txt">
-      <image src="{{currentImageTxt}}"></image>
-    </view>
-    <movable-area class="image-icon1-wrap" bindtap="onblur">
-      <block wx:for="{{currentImageIcon1}}" wx:key="url">
-        <movable-view direction="all" catchtap="onfocus" animation="false" data-inde="{{index}}" data-item="{{item}}" x="{{item.x}}" y="{{item.y}}" class="drop-wrap {{currentMove === index}}" bindchange="onChange">
-          <image src="{{item.url}}"></image>
-          <view class="move"><image src="https://puui.qpic.cn/vupload/0/20180725_scale.png/0"></image></view>
-          <view bindtap="removeIcon" data-url="{{item.url}}" class="x"><image src="https://puui.qpic.cn/vupload/0/20180725_x.png/0"></image></view>
-        </movable-view>
-      </block>
-    </movable-area>
-  </view>
-</view>
-<view class="btn-group {{canvasFlag}}">
-  <view class="menu-list">
-    <block wx:for="{{btnList}}" wx:key="url">
-      <view class="menu-item" data-item="{{item.txt}}" bindtap="selectMenu">
-        <image wx:if="{{menuActive !== item.txt}}" src="{{item.url}}" class="menu-item-icon"></image>
-        <image wx:else src="{{item.active}}" class="menu-item-icon"></image>
+<view class="wrap" bindtouchstart="autoPlayVideo">
+  <view id="container" class="container {{canvasFlag}}">
+    <view class="people-wrap">
+      <view class="people-image">
+        <image src="{{currentPeople}}"></image>
       </view>
-    </block>
+      <view class="bg-img-wrap">
+        <image src="{{currentBg}}"></image>
+      </view>
+      <view class="image-txt">
+        <image src="{{currentImageTxt}}"></image>
+      </view>
+      <movable-area class="image-icon1-wrap" bindtap="onblur">
+        <block wx:for="{{currentImageIcon1}}" wx:key="url">
+          <movable-view direction="all" catchtap="onfocus" animation="false" data-inde="{{index}}" data-item="{{item}}" x="{{item.x}}" y="{{item.y}}" class="drop-wrap {{currentMove === index}}" bindchange="onChange">
+            <image src="{{item.url}}"></image>
+            <view class="move">
+              <image src="https://puui.qpic.cn/vupload/0/20180725_scale.png/0"></image>
+            </view>
+            <view bindtap="removeIcon" data-url="{{item.url}}" class="x">
+              <image src="https://puui.qpic.cn/vupload/0/20180725_x.png/0"></image>
+            </view>
+          </movable-view>
+        </block>
+      </movable-area>
+    </view>
   </view>
-  <view class="content-list">
-    <scroll-view scroll-x class="menu-cnt">
-      <block wx:for="{{contentRow1}}" wx:key="url">
-        <view bindtap="selectItem" data-index="{{index}}" class="avatar-item {{txt}} row1">
-          <image class="avatar" src="{{item}}"></image>
+  <view class="btn-group {{canvasFlag}}">
+    <view class="menu-list">
+      <block wx:for="{{btnList}}" wx:key="url">
+        <view class="menu-item" data-item="{{item.txt}}" bindtap="selectMenu">
+          <image wx:if="{{menuActive !== item.txt}}" src="{{item.url}}" class="menu-item-icon"></image>
+          <image wx:else src="{{item.active}}" class="menu-item-icon"></image>
         </view>
       </block>
-    </scroll-view>
-    <scroll-view scroll-x class="menu-cnt">
-      <block wx:for="{{contentRow2}}" wx:key="url">
-        <view bindtap="selectItem" data-index="{{contentRow1.length + index}}" class="avatar-item {{txt}} row2">
-          <image class="avatar" src="{{item}}"></image>
-        </view>
-      </block>
-    </scroll-view>
+    </view>
+    <view class="content-list">
+      <scroll-view scroll-x class="menu-cnt">
+        <block wx:for="{{contentRow1}}" wx:key="url">
+          <view bindtap="selectItem" data-index="{{index}}" class="avatar-item {{txt}} row1">
+            <image class="avatar" src="{{item}}"></image>
+          </view>
+        </block>
+      </scroll-view>
+      <scroll-view scroll-x class="menu-cnt">
+        <block wx:for="{{contentRow2}}" wx:key="url">
+          <view bindtap="selectItem" data-index="{{contentRow1.length + index}}" class="avatar-item {{txt}} row2">
+            <image class="avatar" src="{{item}}"></image>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="bg-image-wrap">
+      <image class="bg-image" src="https://puui.qpic.cn/vupload/0/20180726_menuBg.png/0"></image>
+    </view>
+    <view class="submit-wrap" id="submit" bindtap="onSubmit">
+      <image src="https://puui.qpic.cn/vupload/0/20180726_submitBtn.png/0"></image>
+      <button hidden="{{isOpenSetting}}" bindopensetting="onOpenSetting" class="open-setting-btn" open-type="openSetting"></button>
+    </view>
   </view>
-  <view class="bg-image-wrap">
-    <image class="bg-image" src="https://puui.qpic.cn/vupload/0/20180726_menuBg.png/0"></image>
+  <view class="canvas-wrap {{canvasFlag}}" bindtap="hideCanvas" bindlongtap='saveCanvas'>
+    <canvas canvas-id="myCanvas" hidden="{{!canvasFlag}}" style="width:{{windowW}}px;height: {{windowH}}px"></canvas>
   </view>
-  <view class="submit-wrap" id="submit" bindtap="onSubmit">
-    <image src="https://puui.qpic.cn/vupload/0/20180726_submitBtn.png/0"></image>
+  <view style="transform: {{rotateDeg}}" class="audio-icon {{isPause}}" bindtap="toggleAudio">
+    <image class="audio-image-hook" src="https://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/audio.png"></image>
   </view>
-</view>
-<view class="canvas-wrap {{canvasFlag}}" bindtap="hideCanvas" bindlongtap='saveCanvas'>
-  <canvas canvas-id="myCanvas" hidden="{{!canvasFlag}}" style="width:{{windowW}}px;height: {{windowH}}px"></canvas>
-</view>
+  <audio id="bgAudio" src="https://mat1.gtimg.com/v/goldenchen/images/mrzzDraw/bg.mp3" loop="true" bindpause="bgAudioPause" bindstop="bgStop" bindplay="bgAudioPlay"></audio>
 </view>
