@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "background-audio": "../components/backgroundaudio/backgroundaudio",
+    "question": "../components/question/question",
+    "rotarytable": "../components/rotarytable/rotarytable"
+  }
+}

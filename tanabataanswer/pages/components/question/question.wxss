@@ -1,0 +1,208 @@
+/* pages/components/question/question.wxss */
+
+.question-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h1 {
+  padding-top: 78rpx;
+  flex: 0 0 auto;
+  font-size: 0;
+  text-align: center;
+}
+
+.h1 > image {
+  display: inline-block;
+  width: 609rpx;
+  height: 213rpx;
+}
+
+.question-list {
+  margin: 0 auto;
+  width: 556rpx;
+  flex: 1;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+
+.question-item {
+  position: relative;
+}
+.question-item:nth-child(1) {
+  margin-left: 40rpx;
+}
+.question-item:nth-child(3) {
+  margin-left: 40rpx;
+}
+
+.question-text {
+  padding-left: 120rpx;
+  height: 53rpx;
+  font-size: 0;
+  text-align: right;
+}
+
+.question-text > image {
+  display: inline-block;
+  width: 460rpx;
+  height: 53rpx;
+}
+
+.question-icon-wrap {
+  position: absolute;
+  top: -44rpx;
+  left: 0;
+  z-index: 2;
+  font-size: 0;
+}
+
+@keyframes swing {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate3d(-20rpx, 0, 0);
+    -moz-transform: translate3d(-20rpx, 0, 0);
+    -ms-transform: translate3d(-20rpx, 0, 0);
+    -o-transform: translate3d(-20rpx, 0, 0);
+    transform: translate3d(-20rpx, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(20rpx, 0, 0);
+    -moz-transform: translate3d(20rpx, 0, 0);
+    -ms-transform: translate3d(20rpx, 0, 0);
+    -o-transform: translate3d(20rpx, 0, 0);
+    transform: translate3d(20rpx, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.question-icon {
+  display: block;
+  width: 192rpx;
+  height: 144rpx;
+  -webkit-animation: swing 2s linear infinite;
+  -moz-animation: swing 2s linear infinite;
+  -ms-animation: swing 2s linear infinite;
+  -o-animation: swing 2s linear infinite;
+  animation: swing 2s linear infinite;
+}
+
+.answer-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 400;
+  overflow: hidden;
+}
+
+.btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 40rpx;
+  left: 0;
+  height: 78rpx;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-around;
+}
+
+.active, .retry {
+  width: 217rpx;
+  padding: 0;
+  height: 78rpx;
+  background: none;
+}
+
+.active:after {
+  border-color: transparent;
+}
+
+.retry:after {
+  border-color: transparent;
+}
+
+.active > image, .retry > image {
+  width: 217rpx;
+  height: 78rpx;
+}
+.active {
+    -webkit-animation: shake 1s linear infinite;
+  -moz-animation: shake 1s linear infinite;
+  -ms-animation: shake 1s linear infinite;
+  -o-animation: shake 1s linear infinite;
+  animation: shake 1s linear infinite;
+}
+
+@keyframes shake {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}

@@ -1,0 +1,70 @@
+/* pages/components/rotarytable/rotarytable.wxss */
+.rotate-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.rotate-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750rpx;
+  height: 800rpx;
+  z-index: 5;
+  background: red;
+}
+.rotate-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 750rpx;
+  height: 800rpx;
+}
+.rotate-box.zIndex {
+  z-index: 20;
+}
+@keyframes rotateDeg {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+    100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.rotate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 800rpx;
+  z-index: -1;
+  transform-origin: center 462rpx;
+  transition: all 3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.rotateDeg {
+  -webkit-animation: rotateDeg .8s linear infinite;
+  -moz-animation: rotateDeg .8s linear infinite;
+  -ms-animation: rotateDeg .8s linear infinite;
+  -o-animation: rotateDeg .8s linear infinite;
+  animation: rotateDeg .8s linear infinite;
+}
+.rotate-pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 750rpx;
+  height: 800rpx;
+  z-index: 100;
+}
